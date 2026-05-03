@@ -16,6 +16,19 @@
   let territoryOverlay = null;
   const featureLayers = new WeakMap();
 
+  placeFilters.addEventListener(
+    "wheel",
+    (event) => {
+      if (placeFilters.hidden) return;
+      const dominantDelta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
+      if (!dominantDelta) return;
+
+      event.preventDefault();
+      placeFilters.scrollLeft += dominantDelta;
+    },
+    { passive: false }
+  );
+
   const normalise = (value) =>
     String(value || "")
       .normalize("NFD")
@@ -79,6 +92,13 @@
     worldCopyJump: true,
     minZoom: 2,
     maxZoom: 7,
+    zoomSnap: 0.25,
+    zoomDelta: 0.5,
+    wheelPxPerZoomLevel: 140,
+    wheelDebounceTime: 35,
+    easeLinearity: 0.18,
+    inertia: true,
+    inertiaDeceleration: 2600,
   }).setView([18, 8], 2);
 
   L.control.zoom({ position: "bottomleft" }).addTo(map);

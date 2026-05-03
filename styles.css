@@ -96,6 +96,10 @@ h1 {
   font: inherit;
 }
 
+.leaflet-zoom-animated {
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
 .leaflet-interactive {
   cursor: pointer;
 }
@@ -156,6 +160,8 @@ h1 {
 }
 
 .vehicle-panel {
+  position: relative;
+  z-index: 2000;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -187,8 +193,11 @@ h1 {
   display: flex;
   gap: 8px;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
   padding: 14px 0 0;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .place-filter {
@@ -299,7 +308,7 @@ h2 {
 
   .vehicle-panel {
     position: fixed;
-    z-index: 1000;
+    z-index: 5000;
     right: 0;
     bottom: 0;
     left: 0;
