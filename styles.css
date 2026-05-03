@@ -109,6 +109,52 @@ h1 {
   color: var(--text);
 }
 
+.territory-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 950;
+  pointer-events: none;
+}
+
+.territory-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(255, 223, 126, 0.28);
+  cursor: pointer;
+  filter: drop-shadow(0 5px 14px rgba(0, 0, 0, 0.52));
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.territory-dot {
+  display: block;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #121417;
+  border-radius: 999px;
+  background: #ffdf7e;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.82);
+}
+
+.territory-marker.is-selected .territory-dot {
+  border-color: #ffffff;
+  background: #f4c95d;
+  box-shadow: 0 0 0 3px rgba(244, 201, 93, 0.46);
+}
+
+.territory-marker.is-selected {
+  background: rgba(244, 201, 93, 0.42);
+}
+
 .vehicle-panel {
   display: flex;
   flex-direction: column;
@@ -134,6 +180,39 @@ h1 {
   gap: 16px;
   padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
+}
+
+.place-filters {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 14px 0 0;
+  scrollbar-width: thin;
+}
+
+.place-filter {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 11px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.place-filter.is-active {
+  border-color: rgba(244, 201, 93, 0.82);
+  background: rgba(244, 201, 93, 0.18);
+  color: #ffe08a;
+}
+
+.place-filter:active {
+  transform: translateY(1px);
 }
 
 .eyebrow {
@@ -282,6 +361,16 @@ h2 {
 
   .vehicle-card img {
     height: 230px;
+  }
+
+  .territory-marker {
+    width: 44px;
+    height: 44px;
+  }
+
+  .territory-dot {
+    width: 24px;
+    height: 24px;
   }
 }
 

@@ -2,13 +2,18 @@
   const cars = window.GOOGLE_CARS || {};
   const countryName = document.getElementById("countryName");
   const vehicleCount = document.getElementById("vehicleCount");
+  const placeFilters = document.getElementById("placeFilters");
   const gallery = document.getElementById("gallery");
   const coverageStat = document.getElementById("coverageStat");
   const vehiclePanel = document.getElementById("vehiclePanel");
   const sheetHandle = document.getElementById("sheetHandle");
   let currentRenderedName = "";
   let selectedLayer = null;
+  let selectedMarker = null;
   let geoFeatures = [];
+  let suppressNextMapClick = false;
+  let loadedTerritoryMarkerCount = 0;
+  let territoryOverlay = null;
   const featureLayers = new WeakMap();
 
   const normalise = (value) =>
@@ -35,14 +40,39 @@
 
   const dataByKey = new Map(Object.keys(cars).map((name) => [normalise(name), name]));
   const totalVehicles = Object.values(cars).reduce((sum, list) => sum + list.length, 0);
-  coverageStat.textContent = `${totalVehicles} photos | ${Object.keys(cars).length} countries`;
+  coverageStat.textContent = `${totalVehicles} photos | ${Object.keys(cars).length} places`;
 
   const territoryMarkers = [
-    { name: "Christmas Island", latlng: [-10.4475, 105.6904] },
-    { name: "Cocos (Keeling) Islands", latlng: [-12.1642, 96.871] },
-    { name: "Gibraltar", latlng: [36.1408, -5.3536] },
-    { name: "Réunion", latlng: [-21.1151, 55.5364] },
+    { name: "American Samoa", parent: "United States", latlng: [-14.271, -170.1322] },
+    { name: "Andorra", latlng: [42.5063, 1.5218] },
+    { name: "Bermuda", parent: "United Kingdom", latlng: [32.3078, -64.7505] },
+    { name: "Christmas Island", parent: "Australia", latlng: [-10.4475, 105.6904] },
+    { name: "Cocos (Keeling) Islands", parent: "Australia", latlng: [-12.1642, 96.871] },
+    { name: "Curaçao", parent: "Netherlands", latlng: [12.1696, -68.99] },
+    { name: "Faroe Islands", parent: "Denmark", latlng: [61.8926, -6.9118] },
+    { name: "Gibraltar", parent: "United Kingdom", latlng: [36.1408, -5.3536] },
+    { name: "Guam", parent: "United States", latlng: [13.4443, 144.7937] },
+    { name: "Hong Kong", parent: "China", latlng: [22.3193, 114.1694] },
+    { name: "Liechtenstein", latlng: [47.166, 9.5554] },
+    { name: "Monaco", latlng: [43.7384, 7.4246] },
+    { name: "Northern Mariana Islands", parent: "United States", latlng: [15.0979, 145.6739] },
+    { name: "Puerto Rico", parent: "United States", latlng: [18.2208, -66.5901] },
+    { name: "Réunion", parent: "France", latlng: [-21.1151, 55.5364] },
+    { name: "San Marino", latlng: [43.9424, 12.4578] },
+    { name: "Singapore", latlng: [1.3521, 103.8198] },
+    { name: "United States Virgin Islands", parent: "United States", latlng: [18.3358, -64.8963] },
+    { name: "Åland", parent: "Finland", latlng: [60.1785, 19.9156] },
   ];
+  const territoriesByParent = territoryMarkers.reduce((groups, territory) => {
+    if (!territory.parent || !cars[territory.name]) return groups;
+    groups[territory.parent] ??= [];
+    groups[territory.parent].push(territory.name);
+    return groups;
+  }, {});
+  const parentByTerritory = territoryMarkers.reduce((parents, territory) => {
+    if (territory.parent) parents[territory.name] = territory.parent;
+    return parents;
+  }, {});
 
   const map = L.map("map", {
     zoomControl: false,
@@ -90,6 +120,11 @@
       countryLayer.resetStyle(selectedLayer);
     }
 
+    if (selectedMarker) {
+      setTerritoryMarkerSelected(selectedMarker, false);
+      selectedMarker = null;
+    }
+
     selectedLayer = layer;
     layer.setStyle({
       color: "#f4c95d",
@@ -103,6 +138,39 @@
     }
 
     name ? renderCountry(name) : renderEmpty(displayName);
+  }
+
+  function territoryIcon(selected = false) {
+    const marker = document.createElement("button");
+    marker.type = "button";
+    marker.className = `territory-marker${selected ? " is-selected" : ""}`;
+    marker.innerHTML = '<span class="territory-dot" aria-hidden="true"></span>';
+    return marker;
+  }
+
+  function setTerritoryMarkerSelected(marker, selected) {
+    marker.classList.toggle("is-selected", selected);
+  }
+
+  function selectTerritory(marker, name) {
+    suppressNextMapClick = true;
+
+    if (selectedLayer) {
+      countryLayer.resetStyle(selectedLayer);
+      selectedLayer = null;
+    }
+
+    if (selectedMarker && selectedMarker !== marker) {
+      setTerritoryMarkerSelected(selectedMarker, false);
+    }
+
+    selectedMarker = marker;
+    setTerritoryMarkerSelected(marker, true);
+    renderCountry(name);
+
+    window.setTimeout(() => {
+      suppressNextMapClick = false;
+    }, 250);
   }
 
   function openVehiclePanel() {
@@ -219,6 +287,27 @@
     selectLayer(layer, name, displayName);
   }
 
+  function filterPlacesFor(name) {
+    const parent = parentByTerritory[name] || name;
+    const places = [parent, ...(territoriesByParent[parent] || [])].filter((place) => cars[place]);
+    return places.length > 1 ? places : [];
+  }
+
+  function renderPlaceFilters(activeName) {
+    const places = filterPlacesFor(activeName);
+    placeFilters.hidden = places.length === 0;
+    placeFilters.replaceChildren(
+      ...places.map((place) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `place-filter${place === activeName ? " is-active" : ""}`;
+        button.textContent = place;
+        button.addEventListener("click", () => renderCountry(place));
+        return button;
+      })
+    );
+  }
+
   function renderCountry(name) {
     openVehiclePanel();
     if (currentRenderedName === name) return;
@@ -228,6 +317,7 @@
     countryName.textContent = name;
     vehicleCount.textContent = `${list.length} ${list.length === 1 ? "car" : "cars"}`;
     gallery.hidden = false;
+    renderPlaceFilters(name);
 
     gallery.replaceChildren(
       ...list.map((vehicle, index) => {
@@ -258,8 +348,53 @@
 
     countryName.textContent = name || "No vehicle photos";
     vehicleCount.textContent = "0 cars";
+    placeFilters.hidden = true;
+    placeFilters.replaceChildren();
     gallery.hidden = true;
     gallery.replaceChildren();
+  }
+
+  function updateTerritoryOverlay() {
+    if (!territoryOverlay) return;
+
+    for (const marker of territoryOverlay.children) {
+      const lat = Number(marker.dataset.lat);
+      const lng = Number(marker.dataset.lng);
+      const point = map.latLngToContainerPoint([lat, lng]);
+      marker.style.transform = `translate(${point.x}px, ${point.y}px) translate(-50%, -50%)`;
+    }
+  }
+
+  function buildTerritoryOverlay() {
+    territoryOverlay = document.createElement("div");
+    territoryOverlay.className = "territory-overlay";
+    map.getContainer().append(territoryOverlay);
+
+    territoryMarkers.forEach((territory) => {
+      if (!cars[territory.name]) return;
+
+      const marker = territoryIcon();
+      marker.dataset.lat = String(territory.latlng[0]);
+      marker.dataset.lng = String(territory.latlng[1]);
+      marker.title = territory.name;
+      marker.setAttribute("aria-label", `Show ${territory.name} cars`);
+
+      marker.addEventListener("pointerdown", (event) => {
+        event.stopPropagation();
+        selectTerritory(marker, territory.name);
+      });
+      marker.addEventListener("click", (event) => {
+        event.stopPropagation();
+        selectTerritory(marker, territory.name);
+      });
+
+      territoryOverlay.append(marker);
+      loadedTerritoryMarkerCount += 1;
+    });
+
+    coverageStat.textContent = `${totalVehicles} photos | ${Object.keys(cars).length} places | ${loadedTerritoryMarkerCount} territory pins`;
+    updateTerritoryOverlay();
+    map.on("move zoom resize", updateTerritoryOverlay);
   }
 
   function onEachCountry(feature, layer) {
@@ -343,29 +478,13 @@
         onEachFeature: onEachCountry,
       }).addTo(map);
 
-      territoryMarkers.forEach((territory) => {
-        if (!cars[territory.name]) return;
-        const marker = L.circleMarker(territory.latlng, {
-          radius: 6,
-          color: "#f4c95d",
-          weight: 2,
-          fillColor: "#f4c95d",
-          fillOpacity: 0.86,
-        }).addTo(map);
-
-        marker.bindTooltip(territory.name, {
-          direction: "top",
-          offset: [0, -8],
-          opacity: 0.92,
-        });
-        marker.on("click", () => renderCountry(territory.name));
-      });
-
       map.fitBounds(countryLayer.getBounds(), { padding: [12, 12] });
+      buildTerritoryOverlay();
 
       const mapElement = map.getContainer();
 
       mapElement.addEventListener("click", (event) => {
+        if (suppressNextMapClick) return;
         selectFeatureAt(map.mouseEventToLatLng(event));
       });
     })
