@@ -18,25 +18,23 @@
         <div class="topbar">
           <div>
             <h1>Google Car Map</h1>
-            <p>Hover a country to see the scraped GeoHints vehicle photos.</p>
+            <p>Click a country to see the scraped GeoHints vehicle photos.</p>
           </div>
           <div class="stat" id="coverageStat">Loading data...</div>
         </div>
         <div id="map"></div>
       </section>
 
-      <aside class="vehicle-panel" aria-live="polite">
+      <aside class="vehicle-panel" id="vehiclePanel" aria-live="polite">
+        <button class="sheet-handle" id="sheetHandle" type="button" aria-label="Toggle vehicle photos panel">
+          <span></span>
+        </button>
         <div class="panel-heading">
           <div>
             <p class="eyebrow">Selected country</p>
-            <h2 id="countryName">Hover over the map</h2>
+            <h2 id="countryName">Click the map</h2>
           </div>
           <span id="vehicleCount" class="count">0 cars</span>
-        </div>
-
-        <div id="emptyState" class="empty-state">
-          <strong>No country selected</strong>
-          <span>Move your pointer over a highlighted country, or tap one on mobile.</span>
         </div>
 
         <div id="gallery" class="gallery" hidden></div>

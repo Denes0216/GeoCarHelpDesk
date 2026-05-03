@@ -3,8 +3,9 @@
   const countryName = document.getElementById("countryName");
   const vehicleCount = document.getElementById("vehicleCount");
   const gallery = document.getElementById("gallery");
-  const emptyState = document.getElementById("emptyState");
   const coverageStat = document.getElementById("coverageStat");
+  const vehiclePanel = document.getElementById("vehiclePanel");
+  const sheetHandle = document.getElementById("sheetHandle");
   let currentRenderedName = "";
   let selectedLayer = null;
   let geoFeatures = [];
@@ -102,6 +103,16 @@
     }
 
     name ? renderCountry(name) : renderEmpty(displayName);
+  }
+
+  function openVehiclePanel() {
+    vehiclePanel.classList.add("is-open");
+    vehiclePanel.style.transform = "";
+  }
+
+  function closeVehiclePanel() {
+    vehiclePanel.classList.remove("is-open");
+    vehiclePanel.style.transform = "";
   }
 
   function lngInRange(lng, west, east) {
@@ -209,14 +220,14 @@
   }
 
   function renderCountry(name) {
+    openVehiclePanel();
     if (currentRenderedName === name) return;
     currentRenderedName = name;
 
     const list = cars[name] || [];
     countryName.textContent = name;
     vehicleCount.textContent = `${list.length} ${list.length === 1 ? "car" : "cars"}`;
-    emptyState.hidden = list.length > 0;
-    gallery.hidden = list.length === 0;
+    gallery.hidden = false;
 
     gallery.replaceChildren(
       ...list.map((vehicle, index) => {
@@ -241,6 +252,7 @@
   }
 
   function renderEmpty(name) {
+    openVehiclePanel();
     if (currentRenderedName === name) return;
     currentRenderedName = name;
 
@@ -248,8 +260,6 @@
     vehicleCount.textContent = "0 cars";
     gallery.hidden = true;
     gallery.replaceChildren();
-    emptyState.hidden = false;
-    emptyState.innerHTML = "<strong>No GeoHints cars here</strong><span>This country was not listed on the scraped cars page.</span>";
   }
 
   function onEachCountry(feature, layer) {
@@ -276,6 +286,50 @@
   }
 
   let countryLayer;
+
+  let dragStartY = 0;
+  let dragDistance = 0;
+  let isDraggingSheet = false;
+
+  sheetHandle.addEventListener("click", () => {
+    if (vehiclePanel.classList.contains("is-open")) {
+      closeVehiclePanel();
+    } else if (currentRenderedName) {
+      openVehiclePanel();
+    }
+  });
+
+  sheetHandle.addEventListener("pointerdown", (event) => {
+    isDraggingSheet = true;
+    dragStartY = event.clientY;
+    dragDistance = 0;
+    sheetHandle.setPointerCapture(event.pointerId);
+    vehiclePanel.classList.add("is-dragging");
+  });
+
+  sheetHandle.addEventListener("pointermove", (event) => {
+    if (!isDraggingSheet || !vehiclePanel.classList.contains("is-open")) return;
+    dragDistance = Math.max(0, event.clientY - dragStartY);
+    vehiclePanel.style.transform = `translateY(${dragDistance}px)`;
+  });
+
+  sheetHandle.addEventListener("pointerup", () => {
+    if (!isDraggingSheet) return;
+    isDraggingSheet = false;
+    vehiclePanel.classList.remove("is-dragging");
+
+    if (dragDistance > 90) {
+      closeVehiclePanel();
+    } else {
+      openVehiclePanel();
+    }
+  });
+
+  sheetHandle.addEventListener("pointercancel", () => {
+    isDraggingSheet = false;
+    vehiclePanel.classList.remove("is-dragging");
+    vehiclePanel.style.transform = "";
+  });
 
   fetch("countries.geo.json")
     .then((response) => {
@@ -317,7 +371,14 @@
     })
     .catch((error) => {
       countryName.textContent = "Map failed to load";
-      emptyState.hidden = false;
-      emptyState.innerHTML = `<strong>${error.message}</strong><span>Run this page from a local web server so the GeoJSON can be fetched.</span>`;
+      vehicleCount.textContent = "0 cars";
+      gallery.hidden = false;
+      gallery.replaceChildren();
+
+      const message = document.createElement("article");
+      message.className = "vehicle-card message-card";
+      message.textContent = `${error.message}. Run this page from a local web server so the GeoJSON can be fetched.`;
+      gallery.append(message);
+      openVehiclePanel();
     });
 })();
