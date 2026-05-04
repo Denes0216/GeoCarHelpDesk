@@ -12,7 +12,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Åland",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2009,
@@ -464,7 +464,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Chile",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow",
@@ -490,7 +490,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "China",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2019,
@@ -514,7 +514,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Cocos (Keeling) Islands",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": [
@@ -524,7 +524,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Colombia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -547,7 +547,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Costa Rica",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -563,7 +563,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Croatia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -619,7 +619,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Czech Republic",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -647,7 +647,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Democratic Republic of the Congo",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -655,7 +655,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Denmark",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -682,25 +682,9 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Djibouti",
-    "drivingSide": "right",
-    "euLicencePlate": null,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Dominica",
-    "drivingSide": "left",
-    "euLicencePlate": null,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Dominican Republic",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -718,7 +702,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Ecuador",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -742,7 +726,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Egypt",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -750,7 +734,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "El Salvador",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -758,7 +742,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Equatorial Guinea",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -766,7 +750,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Eritrea",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -774,7 +758,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Estonia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -800,7 +784,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Eswatini",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White",
       "Outside: Yellow | Inside: White and yellow"
@@ -824,7 +808,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Ethiopia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -832,7 +816,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Falkland Islands",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2025
@@ -842,7 +826,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Faroe Islands",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -858,7 +842,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Fiji",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -866,7 +850,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Finland",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: White and yellow",
@@ -896,7 +880,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "France",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: White and yellow",
@@ -930,7 +914,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "French Guiana",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -938,7 +922,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "French Polynesia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -946,7 +930,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "French Southern and Antarctic Lands",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -954,7 +938,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Gabon",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -962,7 +946,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Gambia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -970,7 +954,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Georgia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -978,7 +962,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Germany",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1002,7 +986,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Ghana",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1021,7 +1005,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Gibraltar",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -1043,7 +1027,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Greece",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow"
@@ -1071,7 +1055,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Greenland",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1092,7 +1076,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Grenada",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1100,7 +1084,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Guadeloupe",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1108,7 +1092,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Guam",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -1120,7 +1104,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Guatemala",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -1140,7 +1124,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Guernsey",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1148,7 +1132,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Guinea",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1156,7 +1140,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Guinea-Bissau",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1164,7 +1148,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Guyana",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1172,7 +1156,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Haiti",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1180,7 +1164,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Heard Island and McDonald Islands",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1188,7 +1172,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Honduras",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1196,7 +1180,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Hong Kong",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2012,
@@ -1221,7 +1205,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Hungary",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -1247,7 +1231,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Iceland",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1271,7 +1255,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "India",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White",
@@ -1293,7 +1277,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Indonesia",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow",
@@ -1318,7 +1302,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Iran",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1326,7 +1310,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Iraq",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2020
@@ -1336,7 +1320,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Ireland",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: Yellow | Inside: White"
     ],
@@ -1361,7 +1345,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Isle of Man",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -1388,7 +1372,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Israel",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White"
     ],
@@ -1416,7 +1400,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Italy",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1446,7 +1430,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Jamaica",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1454,7 +1438,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Japan",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: White and yellow",
@@ -1486,7 +1470,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Jersey",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White"
     ],
@@ -1510,7 +1494,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Jordan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White"
     ],
@@ -1531,7 +1515,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Kazakhstan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -1549,7 +1533,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Kenya",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow"
@@ -1570,7 +1554,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Kiribati",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1578,7 +1562,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Kosovo",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1586,7 +1570,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Kuwait",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1594,7 +1578,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Kyrgyzstan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1616,7 +1600,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Laos",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1641,7 +1625,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Latvia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1665,7 +1649,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Lebanon",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -1680,7 +1664,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Lesotho",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White"
     ],
@@ -1701,7 +1685,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Liberia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1709,7 +1693,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Libya",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1717,7 +1701,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Liechtenstein",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1732,7 +1716,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Lithuania",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -1756,7 +1740,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Luxembourg",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1780,7 +1764,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Macao",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2013,
@@ -1798,7 +1782,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Madagascar",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1812,7 +1796,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Malawi",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1820,7 +1804,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Malaysia",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -1843,7 +1827,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Maldives",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1851,7 +1835,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Mali",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1859,7 +1843,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Malta",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1880,7 +1864,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Marshall Islands",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1888,7 +1872,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Martinique",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1896,7 +1880,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Mauritania",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1904,7 +1888,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Mauritius",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1912,7 +1896,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Mayotte",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1920,7 +1904,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Mexico",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow",
@@ -1950,7 +1934,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Micronesia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1958,7 +1942,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Moldova",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -1966,7 +1950,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Monaco",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -1987,7 +1971,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Mongolia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -2009,7 +1993,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Montenegro",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -2028,7 +2012,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Montserrat",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2036,7 +2020,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Morocco",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2044,7 +2028,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Mozambique",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2052,7 +2036,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Myanmar",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2060,7 +2044,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Namibia",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Red | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -2076,7 +2060,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Nauru",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2084,7 +2068,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Nepal",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White"
     ],
@@ -2098,7 +2082,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Netherlands",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: White and green"
@@ -2126,7 +2110,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "New Caledonia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2134,7 +2118,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "New Zealand",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: White and yellow",
@@ -2166,7 +2150,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Nicaragua",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2174,7 +2158,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Niger",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2182,7 +2166,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Nigeria",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White"
     ],
@@ -2203,7 +2187,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Niue",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2211,7 +2195,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Norfolk Island",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2219,7 +2203,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "North Korea",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2227,7 +2211,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "North Macedonia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: Yellow"
@@ -2249,7 +2233,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Northern Mariana Islands",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -2261,7 +2245,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Norway",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -2289,7 +2273,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Oman",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White",
       "Outside: Yellow | Inside: Yellow"
@@ -2305,7 +2289,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Pakistan",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": [
@@ -2315,7 +2299,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Palau",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2323,7 +2307,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Palestine",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White"
     ],
@@ -2346,7 +2330,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Panama",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -2362,7 +2346,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Papua New Guinea",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2370,7 +2354,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Paraguay",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -2384,7 +2368,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Peru",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow"
@@ -2410,7 +2394,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Philippines",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Blue | Inside: Blue",
       "Outside: Blue | Inside: Orange",
@@ -2437,7 +2421,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Pitcairn Islands",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2013,
@@ -2448,7 +2432,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Poland",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -2477,7 +2461,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Portugal",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -2503,7 +2487,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Puerto Rico",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -2523,7 +2507,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Qatar",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow"
@@ -2542,7 +2526,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Republic of the Congo",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2550,7 +2534,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Réunion",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2558,7 +2542,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Romania",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: Yellow"
@@ -2583,7 +2567,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Russia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow",
@@ -2611,7 +2595,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Rwanda",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow"
@@ -2629,7 +2613,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Saint Barthélemy",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2637,7 +2621,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Saint Helena",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2645,7 +2629,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Saint Kitts and Nevis",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2653,7 +2637,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Saint Lucia",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2661,7 +2645,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Saint Martin",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2669,7 +2653,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Saint Pierre and Miquelon",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2019,
@@ -2684,7 +2668,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Saint Vincent and the Grenadines",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2692,7 +2676,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Samoa",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2700,7 +2684,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "San Marino",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -2726,7 +2710,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "São Tomé and Príncipe",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -2739,7 +2723,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Saudi Arabia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2747,7 +2731,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Senegal",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -2768,7 +2752,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Serbia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -2791,7 +2775,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Seychelles",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2799,7 +2783,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Sierra Leone",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2807,7 +2791,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Singapore",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -2829,7 +2813,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Sint Maarten",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2837,7 +2821,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Slovakia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -2862,7 +2846,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Slovenia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -2885,7 +2869,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Solomon Islands",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2893,7 +2877,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Somalia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2901,7 +2885,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "South Africa",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Red | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -2933,7 +2917,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "South Georgia and the South Sandwich Islands",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2941,7 +2925,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "South Korea",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow",
@@ -2963,7 +2947,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "South Sudan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -2971,7 +2955,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Spain",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: Blue | Inside: White",
       "Outside: White | Inside: White",
@@ -3005,7 +2989,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Sri Lanka",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: Yellow | Inside: White"
@@ -3028,7 +3012,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Sudan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3036,7 +3020,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Suriname",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3044,7 +3028,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Svalbard and Jan Mayen",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2020
@@ -3054,7 +3038,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Sweden",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -3082,7 +3066,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Switzerland",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -3108,7 +3092,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Syria",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": [
@@ -3118,7 +3102,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Taiwan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Blue | Inside: Blue",
       "Outside: Red | Inside: Yellow",
@@ -3150,7 +3134,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Tajikistan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3158,7 +3142,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Tanzania",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3166,7 +3150,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Thailand",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -3189,7 +3173,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Timor-Leste",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3197,7 +3181,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Togo",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3205,7 +3189,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Tokelau",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3213,7 +3197,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Tonga",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3221,7 +3205,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Trinidad and Tobago",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3229,7 +3213,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Tunisia",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -3249,7 +3233,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Turkey",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: White and yellow",
@@ -3279,7 +3263,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Turkmenistan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3287,7 +3271,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Turks and Caicos Islands",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3295,7 +3279,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Tuvalu",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3303,7 +3287,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Uganda",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: Yellow"
@@ -3324,7 +3308,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Ukraine",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: White | Inside: White"
     ],
@@ -3350,7 +3334,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "United Arab Emirates",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: Yellow | Inside: White",
       "Outside: Yellow | Inside: Yellow"
@@ -3376,7 +3360,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "United Kingdom",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": true,
     "lineMarkings": [
       "Outside: Red | Inside: White",
       "Outside: White | Inside: White",
@@ -3410,7 +3394,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "United States",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: Yellow"
     ],
@@ -3443,7 +3427,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "United States Minor Outlying Islands",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2012,
@@ -3454,7 +3438,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "United States Virgin Islands",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [
       2016,
@@ -3472,7 +3456,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Uruguay",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: White and yellow"
@@ -3493,7 +3477,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Uzbekistan",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3501,7 +3485,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Vanuatu",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3509,7 +3493,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Vatican City",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3517,7 +3501,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Venezuela",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3525,7 +3509,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Vietnam",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [
       "Outside: White | Inside: White",
       "Outside: White | Inside: White and yellow",
@@ -3547,7 +3531,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Wallis and Futuna",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3555,7 +3539,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Western Sahara",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3563,7 +3547,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Yemen",
     "drivingSide": "right",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3571,7 +3555,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Zambia",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
@@ -3579,7 +3563,7 @@ window.COUNTRY_FILTER_DATA = [
   {
     "country": "Zimbabwe",
     "drivingSide": "left",
-    "euLicencePlate": null,
+    "euLicencePlate": false,
     "lineMarkings": [],
     "coverageYears": [],
     "cameraGenerations": []
