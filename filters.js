@@ -35,6 +35,7 @@
   }
 
   function yearsMatch(countryYears, filterYear) {
+    if (filterYear < 2009) return countryYears;
     if (!countryYears.length) return false;
     return countryYears.some((year) => year == filterYear);
   }
