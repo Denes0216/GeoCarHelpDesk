@@ -78,7 +78,7 @@
           <h3>${country.country}</h3>
           <dl>
             <div><dt>Driving side</dt><dd>${country.drivingSide}</dd></div>
-            <div><dt>EU licence plate</dt><dd>${yesNo(country.euLicencePlate)}</dd></div>
+            <div><dt>Has EU blue on plate</dt><dd>${yesNo(country.euLicencePlate)}</dd></div>
             <div><dt>Line markings</dt><dd>${listValue(country.lineMarkings)}</dd></div>
             <div><dt>Coverage</dt><dd>${yearValue(country.coverageYears)}</dd></div>
             <div><dt>Camera gen</dt><dd>${listValue(country.cameraGenerations)}</dd></div>
