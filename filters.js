@@ -4,8 +4,7 @@
     drivingSide: document.getElementById("drivingSideFilter"),
     euPlate: document.getElementById("euPlateFilter"),
     lineMarking: document.getElementById("lineMarkingFilter"),
-    yearFrom: document.getElementById("yearFromFilter"),
-    yearTo: document.getElementById("yearToFilter"),
+    year: document.getElementById("year"),
     cameraGeneration: document.getElementById("cameraGenerationFilter"),
   };
   const resultCount = document.getElementById("resultCount");
@@ -35,21 +34,20 @@
     return value === (filterValue === "yes");
   }
 
-  function yearsMatch(countryYears, filterStart, filterEnd) {
+  function yearsMatch(countryYears, filterYear) {
     if (!countryYears.length) return false;
-    return countryYears.some((year) => year >= filterStart && year <= filterEnd);
+    return countryYears.some((year) => year == filterYear);
   }
 
   function countryMatches(country) {
-    const yearFrom = Number(controls.yearFrom.value);
-    const yearTo = Number(controls.yearTo.value);
+    const year = Number(controls.year.value)
     const cameraGeneration = controls.cameraGeneration.value;
 
     return (
       (controls.drivingSide.value === "any" || country.drivingSide === controls.drivingSide.value) &&
       booleanMatches(country.euLicencePlate, controls.euPlate.value) &&
       (controls.lineMarking.value === "any" || country.lineMarkings.includes(controls.lineMarking.value)) &&
-      yearsMatch(country.coverageYears, yearFrom, yearTo) &&
+      yearsMatch(country.coverageYears, year) &&
       (cameraGeneration === "any" || country.cameraGenerations.includes(Number(cameraGeneration)))
     );
   }

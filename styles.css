@@ -477,7 +477,7 @@ h2 {
 
 .filter-bar {
   display: grid;
-  grid-template-columns: repeat(6, minmax(130px, 1fr));
+  grid-template-columns: repeat(5, minmax(130px, 1fr));
   gap: 12px;
   padding: 14px;
   border: 1px solid var(--line);
@@ -502,6 +502,7 @@ h2 {
 .filter-bar input {
   width: 100%;
   min-height: 38px;
+  align-items: center;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 8px 10px;
