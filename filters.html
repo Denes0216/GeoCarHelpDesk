@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Country Filters</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="filters-page">
+    <main class="filters-shell">
+      <header class="filters-header">
+        <div>
+          <h1>Country Filters</h1>
+          <p>Template page for filtering countries by Street View metadata.</p>
+        </div>
+        <a class="nav-link" href="index.html">Car map</a>
+      </header>
+
+      <section class="filter-bar" aria-label="Country filters">
+        <label>
+          <span>Driving side</span>
+          <select id="drivingSideFilter">
+            <option value="any">Any</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </label>
+
+        <label>
+          <span>EU licence plate</span>
+          <select id="euPlateFilter">
+            <option value="any">Any</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Line markings</span>
+          <select id="lineMarkingFilter">
+            <option value="any">Any</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Coverage from</span>
+          <input id="yearFromFilter" type="number" min="2009" max="2026" value="2009">
+        </label>
+
+        <label>
+          <span>Coverage to</span>
+          <input id="yearToFilter" type="number" min="2009" max="2026" value="2026">
+        </label>
+
+        <label>
+          <span>Camera generation</span>
+          <select id="cameraGenerationFilter">
+            <option value="any">Any</option>
+            <option value="1">Gen 1</option>
+            <option value="2">Gen 2</option>
+            <option value="3">Gen 3</option>
+            <option value="4">Gen 4</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="results-heading">
+        <h2 id="resultCount">0 countries</h2>
+      </section>
+
+      <section class="country-results" id="countryResults" aria-live="polite"></section>
+    </main>
+
+    <script src="filters-data.js"></script>
+    <script src="filters.js"></script>
+  </body>
+</html>

@@ -29,6 +29,14 @@
     { passive: false }
   );
 
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch(() => {
+        // Image caching is an enhancement; the site still works if registration is blocked.
+      });
+    });
+  }
+
   const normalise = (value) =>
     String(value || "")
       .normalize("NFD")
@@ -91,17 +99,19 @@
     zoomControl: false,
     worldCopyJump: true,
     minZoom: 2,
-    maxZoom: 7,
-    zoomSnap: 0.25,
-    zoomDelta: 0.5,
-    wheelPxPerZoomLevel: 140,
-    wheelDebounceTime: 35,
-    easeLinearity: 0.18,
+    maxZoom: 2,
+    zoomSnap: 1,
+    zoomDelta: 0,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    touchZoom: false,
+    boxZoom: false,
+    keyboard: false,
     inertia: true,
-    inertiaDeceleration: 2600,
+    inertiaDeceleration: 1800,
+    zoomAnimation: false,
+    markerZoomAnimation: false,
   }).setView([18, 8], 2);
-
-  L.control.zoom({ position: "bottomleft" }).addTo(map);
 
   function featureNames(feature) {
     const props = feature.properties || {};
@@ -328,12 +338,22 @@
     );
   }
 
+  function cacheImagesFor(list) {
+    if (!navigator.serviceWorker?.controller) return;
+
+    navigator.serviceWorker.controller.postMessage({
+      type: "CACHE_IMAGES",
+      urls: list.map((vehicle) => vehicle.image),
+    });
+  }
+
   function renderCountry(name) {
     openVehiclePanel();
     if (currentRenderedName === name) return;
     currentRenderedName = name;
 
     const list = cars[name] || [];
+    cacheImagesFor(list);
     countryName.textContent = name;
     vehicleCount.textContent = `${list.length} ${list.length === 1 ? "car" : "cars"}`;
     gallery.hidden = false;
