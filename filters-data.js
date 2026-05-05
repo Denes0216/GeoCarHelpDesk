@@ -40,7 +40,8 @@ window.COUNTRY_FILTER_DATA = [
       2021,
       2022,
       2024,
-      2025
+      2025,
+      2026
     ],
     "cameraGenerations": [
       3
@@ -298,7 +299,8 @@ window.COUNTRY_FILTER_DATA = [
     ],
     "coverageYears": [
       2024,
-      2025
+      2025,
+      2026
     ],
     "cameraGenerations": [
       4
@@ -1683,7 +1685,8 @@ window.COUNTRY_FILTER_DATA = [
       2019,
       2021,
       2024,
-      2025
+      2025,
+      2026
     ],
     "cameraGenerations": [
       3
@@ -2435,7 +2438,8 @@ window.COUNTRY_FILTER_DATA = [
       2022,
       2023,
       2024,
-      2025
+      2025,
+      2026
     ],
     "cameraGenerations": [
       2,

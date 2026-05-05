@@ -7,6 +7,42 @@
     year: document.getElementById("year"),
     cameraGeneration: document.getElementById("cameraGenerationFilter"),
     hemisphere: document.getElementById("hemisphereFilter"),
+    carColor: document.getElementById("carColorFilter"),
+    vehicleType: document.getElementById("vehicleTypeFilter"),
+  };
+
+  // Countries using a non-car vehicle. Unlisted countries default to "car".
+  // Sources: geodummy.com/camera-cars, geomastery.com/google-car
+  const VEHICLE_TYPE_DATA = {
+    "Christmas Island":            "truck",  // silver pickup/ute
+    "Nigeria":                     "truck",  // large white pickup with bars
+    "Qatar":                       "truck",  // white truck cab (look down)
+    "Senegal":                     "truck",  // silver truck cab (Gen 4)
+    "Uganda":                      "suv",    // boxy white SUV, square mirrors
+    "United States Virgin Islands": "truck", // bulky ute/pickup with tray
+    "Namibia": "truck",
+  };
+
+  // Countries with non-white or mixed car colors. Unlisted countries default to ["white"].
+  // Sources: geodummy.com/camera-cars, dingyiyi0226.github.io/geoguessr-note
+  const CAR_COLOR_DATA = {
+    "Argentina":   ["white", "black"],  // Gen 3 black, Gen 4 white
+    "Belgium":     ["red"],
+    "Bermuda":     ["white", "black"],
+    "Bulgaria":    ["white", "black"],  // Gen 4 partly black
+    "Colombia":    ["white", "black"],  // Gen 3 black
+    "Greece":      ["white", "black"],  // Gen 4 black
+    "Israel":      ["white", "black"],  // black car with antenna (Russia-style)
+    "Jordan":      ["black"],
+    "Latvia":      ["white", "black"],  // Gen 4 partly black
+    "Lithuania":   ["white", "black"],  // mostly black in recent coverage
+    "Netherlands": ["white", "black"],  // Gen 4 partly black (2023)
+    "Palestine":   ["white", "black"],  // black car with antenna
+    "Peru":        ["white", "black"],  // Gen 3 black
+    "Russia":      ["white", "black"],  // distinctive black car with antenna
+    "Rwanda":      ["white", "black"],  // can be white, black, or grey
+    "Ukraine":     ["red"],
+    "Uruguay":     ["white", "black"],  // Gen 3 black
   };
 
   // "both" = country straddles the equator and appears in north and south searches
@@ -95,6 +131,18 @@
     return h === filterValue || h === "both";
   }
 
+  function carColorMatches(country, filterValue) {
+    if (filterValue === "any") return true;
+    const colors = CAR_COLOR_DATA[country.country] || ["white"];
+    return colors.includes(filterValue);
+  }
+
+  function vehicleTypeMatches(country, filterValue) {
+    if (filterValue === "any") return true;
+    const type = VEHICLE_TYPE_DATA[country.country] || "car";
+    return type === filterValue;
+  }
+
   function countryMatches(country) {
     const year = Number(controls.year.value)
     const cameraGeneration = controls.cameraGeneration.value;
@@ -105,7 +153,9 @@
       (controls.lineMarking.value === "any" || country.lineMarkings.includes(controls.lineMarking.value)) &&
       yearsMatch(country.coverageYears, year) &&
       (cameraGeneration === "any" || country.cameraGenerations.includes(Number(cameraGeneration))) &&
-      hemisphereMatches(country, controls.hemisphere.value)
+      hemisphereMatches(country, controls.hemisphere.value) &&
+      carColorMatches(country, controls.carColor.value) &&
+      vehicleTypeMatches(country, controls.vehicleType.value)
     );
   }
 
