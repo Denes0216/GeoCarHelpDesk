@@ -6,6 +6,55 @@
     lineMarking: document.getElementById("lineMarkingFilter"),
     year: document.getElementById("year"),
     cameraGeneration: document.getElementById("cameraGenerationFilter"),
+    hemisphere: document.getElementById("hemisphereFilter"),
+  };
+
+  // "both" = country straddles the equator and appears in north and south searches
+  const HEMISPHERE_DATA = {
+    "Åland": "north", "Albania": "north", "American Samoa": "south",
+    "Andorra": "north", "Argentina": "south", "Australia": "south",
+    "Austria": "north", "Bangladesh": "north", "Belgium": "north",
+    "Bermuda": "north", "Bhutan": "north", "Bolivia": "south",
+    "Bosnia and Herzegovina": "north", "Botswana": "south", "Brazil": "both",
+    "Bulgaria": "north", "Cambodia": "north", "Canada": "north",
+    "Chile": "south", "China": "north", "Christmas Island": "south",
+    "Cocos (Keeling) Islands": "south", "Colombia": "both", "Costa Rica": "north",
+    "Croatia": "north", "Curaçao": "north", "Cyprus": "north",
+    "Czech Republic": "north", "Denmark": "north", "Dominican Republic": "north",
+    "Ecuador": "both", "Egypt": "north", "Estonia": "north",
+    "Eswatini": "south", "Falkland Islands": "south", "Faroe Islands": "north",
+    "Finland": "north", "France": "north", "Germany": "north",
+    "Ghana": "north", "Gibraltar": "north", "Greece": "north",
+    "Greenland": "north", "Guam": "north", "Guatemala": "north",
+    "Hong Kong": "north", "Hungary": "north", "Iceland": "north",
+    "India": "north", "Indonesia": "both", "Iraq": "north",
+    "Ireland": "north", "Isle of Man": "north", "Israel": "north",
+    "Italy": "north", "Japan": "north", "Jersey": "north",
+    "Jordan": "north", "Kazakhstan": "north", "Kenya": "both",
+    "Kyrgyzstan": "north", "Laos": "north", "Latvia": "north",
+    "Lebanon": "north", "Lesotho": "south", "Liechtenstein": "north",
+    "Lithuania": "north", "Luxembourg": "north", "Macao": "north",
+    "Madagascar": "south", "Malaysia": "both", "Malta": "north",
+    "Mexico": "north", "Monaco": "north", "Mongolia": "north",
+    "Montenegro": "north", "Namibia": "south", "Nepal": "north",
+    "Netherlands": "north", "New Zealand": "south", "Nigeria": "north",
+    "North Macedonia": "north", "Northern Mariana Islands": "north", "Norway": "north",
+    "Oman": "north", "Pakistan": "north", "Palestine": "north",
+    "Panama": "north", "Papua New Guinea": "south", "Paraguay": "south",
+    "Peru": "both", "Philippines": "north", "Pitcairn Islands": "south",
+    "Poland": "north", "Portugal": "north", "Puerto Rico": "north",
+    "Qatar": "north", "Réunion": "south", "Romania": "north",
+    "Russia": "north", "Rwanda": "south", "Samoa": "south",
+    "San Marino": "north", "São Tomé and Príncipe": "both", "Senegal": "north",
+    "Serbia": "north", "Singapore": "north", "Slovakia": "north",
+    "Slovenia": "north", "South Africa": "south", "South Korea": "north",
+    "South Sudan": "north", "Spain": "north", "Sri Lanka": "north",
+    "Svalbard and Jan Mayen": "north", "Sweden": "north", "Switzerland": "north",
+    "Taiwan": "north", "Thailand": "north", "Tunisia": "north",
+    "Turkey": "north", "Uganda": "both", "Ukraine": "north",
+    "United Arab Emirates": "north", "United Kingdom": "north", "United States": "north",
+    "United States Minor Outlying Islands": "both", "United States Virgin Islands": "north",
+    "Uruguay": "south", "Vietnam": "north",
   };
   const resultCount = document.getElementById("resultCount");
   const countryResults = document.getElementById("countryResults");
@@ -40,6 +89,12 @@
     return countryYears.some((year) => year == filterYear);
   }
 
+  function hemisphereMatches(country, filterValue) {
+    if (filterValue === "any") return true;
+    const h = HEMISPHERE_DATA[country.country];
+    return h === filterValue || h === "both";
+  }
+
   function countryMatches(country) {
     const year = Number(controls.year.value)
     const cameraGeneration = controls.cameraGeneration.value;
@@ -49,7 +104,8 @@
       booleanMatches(country.euLicencePlate, controls.euPlate.value) &&
       (controls.lineMarking.value === "any" || country.lineMarkings.includes(controls.lineMarking.value)) &&
       yearsMatch(country.coverageYears, year) &&
-      (cameraGeneration === "any" || country.cameraGenerations.includes(Number(cameraGeneration)))
+      (cameraGeneration === "any" || country.cameraGenerations.includes(Number(cameraGeneration))) &&
+      hemisphereMatches(country, controls.hemisphere.value)
     );
   }
 
