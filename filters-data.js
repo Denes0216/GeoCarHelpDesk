@@ -2,14 +2,6 @@
 // Edit the source text files and regenerate this file when replacing the template data.
 window.COUNTRY_FILTER_DATA = [
   {
-    "country": "Afghanistan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Åland",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -184,14 +176,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "Bahamas",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Bangladesh",
@@ -645,14 +629,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Democratic Republic of the Congo",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Denmark",
     "drivingSide": "right",
     "euLicencePlate": true,
@@ -732,30 +708,6 @@ window.COUNTRY_FILTER_DATA = [
     "cameraGenerations": []
   },
   {
-    "country": "El Salvador",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Equatorial Guinea",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Eritrea",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Estonia",
     "drivingSide": "right",
     "euLicencePlate": true,
@@ -806,14 +758,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Ethiopia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Falkland Islands",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -838,14 +782,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "Fiji",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Finland",
@@ -910,54 +846,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "French Guiana",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "French Polynesia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "French Southern and Antarctic Lands",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Gabon",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Gambia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Georgia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Germany",
@@ -1074,22 +962,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Grenada",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Guadeloupe",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Guam",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -1120,62 +992,6 @@ window.COUNTRY_FILTER_DATA = [
     "cameraGenerations": [
       3
     ]
-  },
-  {
-    "country": "Guernsey",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Guinea",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Guinea-Bissau",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Guyana",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Haiti",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Heard Island and McDonald Islands",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Honduras",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Hong Kong",
@@ -1300,14 +1116,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Iran",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Iraq",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -1428,14 +1236,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Jamaica",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Japan",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -1552,30 +1352,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Kiribati",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Kosovo",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Kuwait",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Kyrgyzstan",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -1683,22 +1459,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Liberia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Libya",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Liechtenstein",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -1794,14 +1554,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Malawi",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Malaysia",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -1825,22 +1577,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Maldives",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Mali",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Malta",
     "drivingSide": "left",
     "euLicencePlate": true,
@@ -1860,46 +1596,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "Marshall Islands",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Martinique",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Mauritania",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Mauritius",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Mayotte",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Mexico",
@@ -1930,22 +1626,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "Micronesia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Moldova",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Monaco",
@@ -2010,38 +1690,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Montserrat",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Morocco",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Mozambique",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Myanmar",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Namibia",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -2056,14 +1704,6 @@ window.COUNTRY_FILTER_DATA = [
     "cameraGenerations": [
       4
     ]
-  },
-  {
-    "country": "Nauru",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Nepal",
@@ -2108,14 +1748,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "New Caledonia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "New Zealand",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -2148,22 +1780,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Nicaragua",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Niger",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Nigeria",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -2183,30 +1799,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "Niue",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Norfolk Island",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "North Korea",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "North Macedonia",
@@ -2295,14 +1887,6 @@ window.COUNTRY_FILTER_DATA = [
     "cameraGenerations": [
       3
     ]
-  },
-  {
-    "country": "Palau",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Palestine",
@@ -2524,14 +2108,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Republic of the Congo",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Réunion",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -2611,69 +2187,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Saint Barthélemy",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Saint Helena",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Saint Kitts and Nevis",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Saint Lucia",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Saint Martin",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Saint Pierre and Miquelon",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Saint Vincent and the Grenadines",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Samoa",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -2721,14 +2234,6 @@ window.COUNTRY_FILTER_DATA = [
     "cameraGenerations": []
   },
   {
-    "country": "Saudi Arabia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Senegal",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -2773,22 +2278,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Seychelles",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Sierra Leone",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Singapore",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -2809,14 +2298,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "Sint Maarten",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Slovakia",
@@ -2867,22 +2348,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Solomon Islands",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Somalia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "South Africa",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -2913,14 +2378,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "South Georgia and the South Sandwich Islands",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "South Korea",
@@ -3010,22 +2467,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Sudan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Suriname",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Svalbard and Jan Mayen",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -3090,16 +2531,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Syria",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
     "country": "Taiwan",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -3132,22 +2563,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Tajikistan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Tanzania",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Thailand",
     "drivingSide": "left",
     "euLicencePlate": false,
@@ -3169,46 +2584,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "Timor-Leste",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Togo",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Tokelau",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Tonga",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Trinidad and Tobago",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Tunisia",
@@ -3259,30 +2634,6 @@ window.COUNTRY_FILTER_DATA = [
       3,
       4
     ]
-  },
-  {
-    "country": "Turkmenistan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Turks and Caicos Islands",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Tuvalu",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
   },
   {
     "country": "Uganda",
@@ -3475,38 +2826,6 @@ window.COUNTRY_FILTER_DATA = [
     ]
   },
   {
-    "country": "Uzbekistan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Vanuatu",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Vatican City",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Venezuela",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
     "country": "Vietnam",
     "drivingSide": "right",
     "euLicencePlate": false,
@@ -3528,44 +2847,4 @@ window.COUNTRY_FILTER_DATA = [
       4
     ]
   },
-  {
-    "country": "Wallis and Futuna",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Western Sahara",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Yemen",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Zambia",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Zimbabwe",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  }
 ];
