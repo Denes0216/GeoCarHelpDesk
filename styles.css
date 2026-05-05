@@ -511,6 +511,25 @@ h2 {
   font: inherit;
 }
 
+.filter-bar button {
+  align-self: end;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.filter-bar button:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
 .results-heading {
   display: flex;
   align-items: center;

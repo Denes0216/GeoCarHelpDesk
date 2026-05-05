@@ -356,7 +356,8 @@ window.COUNTRY_FILTER_DATA = [
       2022,
       2023,
       2024,
-      2025
+      2025,
+      2026
     ],
     "cameraGenerations": [
       2,
@@ -1946,7 +1947,8 @@ window.COUNTRY_FILTER_DATA = [
       "Outside: White | Inside: Yellow"
     ],
     "coverageYears": [
-      2025
+      2025,
+      2026
     ],
     "cameraGenerations": [
       4

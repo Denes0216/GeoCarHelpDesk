@@ -21,28 +21,43 @@
     "Uganda":                      "suv",    // boxy white SUV, square mirrors
     "United States Virgin Islands": "truck", // bulky ute/pickup with tray
     "Namibia": "truck",
+    "Paraguay": "truck",
+    "Costa Rica": "truck",
+    "Panama": "truck",
+    "Ecuador": "truck",
+    "Kenya": "truck",
+    "Oman": "truck",
+    "Kazakhstan": "truck",
+    "Turkey": "truck",
   };
 
   // Countries with non-white or mixed car colors. Unlisted countries default to ["white"].
   // Sources: geodummy.com/camera-cars, dingyiyi0226.github.io/geoguessr-note
   const CAR_COLOR_DATA = {
-    "Argentina":   ["white", "black"],  // Gen 3 black, Gen 4 white
+    "Argentina":   ["black", "blue"],  // Gen 3 black, Gen 4 white
     "Belgium":     ["red"],
     "Bermuda":     ["white", "black"],
+    "Brazil":      ["white", "blue", "striped"],
     "Bulgaria":    ["white", "black"],  // Gen 4 partly black
-    "Colombia":    ["white", "black"],  // Gen 3 black
+    "Canada":      ["white", "black", "striped", "blue"],
+    "Colombia":    ["white", "black", "gray"],  // Gen 3 black
     "Greece":      ["white", "black"],  // Gen 4 black
     "Israel":      ["white", "black"],  // black car with antenna (Russia-style)
     "Jordan":      ["black"],
     "Latvia":      ["white", "black"],  // Gen 4 partly black
     "Lithuania":   ["white", "black"],  // mostly black in recent coverage
     "Netherlands": ["white", "black"],  // Gen 4 partly black (2023)
+    "Kenya":       ["white", "gray"],
+    "Mexico":      ["white", "black", "striped", "blue"],
     "Palestine":   ["white", "black"],  // black car with antenna
     "Peru":        ["white", "black"],  // Gen 3 black
+    "Portugal":    ["white", "blue"],
     "Russia":      ["white", "black"],  // distinctive black car with antenna
+    "Senegal":     ["white", "gray"],
+    "South Africa":["white", "blue"],
     "Rwanda":      ["white", "black"],  // can be white, black, or grey
     "Ukraine":     ["red"],
-    "Uruguay":     ["white", "black"],  // Gen 3 black
+    "Uruguay":     ["black"],  // Gen 3 black
   };
 
   // "both" = country straddles the equator and appears in north and south searches
@@ -110,6 +125,13 @@
   Object.values(controls).forEach((control) => {
     control.addEventListener("input", renderResults);
     control.addEventListener("change", renderResults);
+  });
+
+  document.getElementById("resetFilters").addEventListener("click", () => {
+    Object.values(controls).forEach((control) => {
+      control.value = control.tagName === "INPUT" ? "" : "any";
+    });
+    renderResults();
   });
 
   function booleanMatches(value, filterValue) {
