@@ -101,7 +101,7 @@
     minZoom: 2,
     maxZoom: 18,
     zoomSnap: 0,
-    zoomDelta: 0.5,
+    zoomDelta: 2,
     scrollWheelZoom: true,
     doubleClickZoom: false,
     touchZoom: true,
@@ -111,8 +111,8 @@
     inertiaDeceleration: 1800,
     zoomAnimation: true,
     markerZoomAnimation: true,
-    wheelPxPerZoomLevel: 60,
-    wheelDebounceTime: 20,
+    wheelPxPerZoomLevel: 15,
+    wheelDebounceTime: 5,
   }).setView([18, 8], 2);
 
   function featureNames(feature) {
