@@ -1,2856 +1,481 @@
-// Generated from DrivingSide.txt, Lines.txt, Years.txt, and CameraGens.txt.
-// Edit the source text files and regenerate this file when replacing the template data.
-window.COUNTRY_FILTER_DATA = [
-  {
-    "country": "Åland",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2009,
-      2013,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3
-    ]
-  },
-  {
-    "country": "Albania",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2016,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025,
-      2026
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "American Samoa",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2017,
-      2019,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Andorra",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3
-    ]
-  },
-  {
-    "country": "Argentina",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Australia",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Austria",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2012,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Bangladesh",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2019,
-      2020,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Belgium",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Bermuda",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2015,
-      2016,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Bhutan",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2014,
-      2016,
-      2017,
-      2018,
-      2019,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Bolivia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Bosnia and Herzegovina",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2024,
-      2025,
-      2026
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Botswana",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Brazil",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Blue | Inside: Blue",
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2009,
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025,
-      2026
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Bulgaria",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Cambodia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2014,
-      2015,
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Canada",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2009,
-      2010,
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Chile",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2015,
-      2016,
-      2019,
-      2020,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "China",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2019,
-      2020,
-      2021
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Christmas Island",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Cocos (Keeling) Islands",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Colombia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2015,
-      2016,
-      2019,
-      2020,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Costa Rica",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2020,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Croatia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2016,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Curaçao",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2018,
-      2019,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Cyprus",
-    "drivingSide": "left",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2025
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Czech Republic",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2009,
-      2010,
-      2012,
-      2013,
-      2015,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Denmark",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2011,
-      2012,
-      2013,
-      2014,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Dominican Republic",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Ecuador",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Egypt",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Estonia",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Eswatini",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White",
-      "Outside: Yellow | Inside: White and yellow"
-    ],
-    "coverageYears": [
-      2013,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Falkland Islands",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2025
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Faroe Islands",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Finland",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "France",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2009,
-      2010,
-      2011,
-      2012,
-      2013,
-      2014,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Germany",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2010,
-      2013,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Ghana",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2017,
-      2019,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Gibraltar",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2015,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Greece",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Greenland",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Guam",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Guatemala",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2017,
-      2019,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Hong Kong",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Hungary",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2016,
-      2018,
-      2019,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Iceland",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "India",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2020,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Indonesia",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Iraq",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2020
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Ireland",
-    "drivingSide": "left",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2011,
-      2012,
-      2013,
-      2014,
-      2017,
-      2019,
-      2020,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Isle of Man",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2011,
-      2013,
-      2014,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2
-    ]
-  },
-  {
-    "country": "Israel",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Italy",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2010,
-      2012,
-      2013,
-      2014,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Japan",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2009,
-      2011,
-      2012,
-      2013,
-      2014,
-      2016,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Jersey",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2011,
-      2013,
-      2014,
-      2016,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2
-    ]
-  },
-  {
-    "country": "Jordan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Kazakhstan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Kenya",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2018,
-      2019,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Kyrgyzstan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Laos",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Latvia",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2016,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Lebanon",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2020,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Lesotho",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Liechtenstein",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Lithuania",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2016,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Luxembourg",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2014,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Macao",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2013,
-      2017,
-      2018,
-      2019,
-      2021,
-      2022,
-      2024
-    ],
-    "cameraGenerations": [
-      2
-    ]
-  },
-  {
-    "country": "Madagascar",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2020
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Malaysia",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2015,
-      2016,
-      2018,
-      2019,
-      2020,
-      2021,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Malta",
-    "drivingSide": "left",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2016,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Mexico",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Monaco",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2016,
-      2019,
-      2021,
-      2024
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Mongolia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2021,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Montenegro",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2016,
-      2019,
-      2021,
-      2024,
-      2025,
-      2026
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Namibia",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Red | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Nepal",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2020,
-      2024,
-      2025
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Netherlands",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and green"
-    ],
-    "coverageYears": [
-      2009,
-      2010,
-      2013,
-      2015,
-      2016,
-      2018,
-      2019,
-      2020,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "New Zealand",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Nigeria",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "North Macedonia",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Northern Mariana Islands",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Norway",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2010,
-      2011,
-      2012,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Oman",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Pakistan",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Palestine",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2014,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Panama",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Papua New Guinea",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Paraguay",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2025,
-      2026
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Peru",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2019,
-      2020,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Philippines",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Blue | Inside: Blue",
-      "Outside: Blue | Inside: Orange",
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Pitcairn Islands",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2013,
-      2020
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Poland",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Portugal",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2015,
-      2017,
-      2019,
-      2020,
-      2021,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Puerto Rico",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2016,
-      2019,
-      2020,
-      2021,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Qatar",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2020,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Réunion",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Romania",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Russia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Rwanda",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      4
-    ]
-  },
-  {
-    "country": "Samoa",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "San Marino",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "São Tomé and Príncipe",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2023,
-      2024
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Senegal",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2017,
-      2019,
-      2020,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Serbia",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2014,
-      2015,
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Singapore",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Slovakia",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2015,
-      2018,
-      2019,
-      2020,
-      2021,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Slovenia",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2013,
-      2014,
-      2017,
-      2019,
-      2020,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "South Africa",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Red | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2009,
-      2010,
-      2011,
-      2012,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "South Korea",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024
-    ],
-    "cameraGenerations": [
-      2,
-      3
-    ]
-  },
-  {
-    "country": "South Sudan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Spain",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: Blue | Inside: White",
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2009,
-      2010,
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025,
-      2026
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Sri Lanka",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2016,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Svalbard and Jan Mayen",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2020
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "Sweden",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2011,
-      2012,
-      2013,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Switzerland",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2011,
-      2012,
-      2014,
-      2015,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Taiwan",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Blue | Inside: Blue",
-      "Outside: Red | Inside: Yellow",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Thailand",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Tunisia",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2016,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Turkey",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow",
-      "Outside: White | Inside: Yellow",
-      "Outside: Yellow | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Uganda",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2015,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Ukraine",
-    "drivingSide": "right",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: White | Inside: White"
-    ],
-    "coverageYears": [
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "United Arab Emirates",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: Yellow | Inside: White",
-      "Outside: Yellow | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2014,
-      2015,
-      2016,
-      2017,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "United Kingdom",
-    "drivingSide": "left",
-    "euLicencePlate": true,
-    "lineMarkings": [
-      "Outside: Red | Inside: White",
-      "Outside: White | Inside: White",
-      "Outside: Yellow | Inside: White"
-    ],
-    "coverageYears": [
-      2009,
-      2010,
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "United States",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2009,
-      2010,
-      2011,
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      1,
-      2,
-      3,
-      4
-    ]
-  },
-  {
-    "country": "United States Minor Outlying Islands",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2012,
-      2013
-    ],
-    "cameraGenerations": []
-  },
-  {
-    "country": "United States Virgin Islands",
-    "drivingSide": "left",
-    "euLicencePlate": false,
-    "lineMarkings": [],
-    "coverageYears": [
-      2016,
-      2017,
-      2019,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "cameraGenerations": [
-      3
-    ]
-  },
-  {
-    "country": "Uruguay",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow"
-    ],
-    "coverageYears": [
-      2015,
-      2016,
-      2017,
-      2019,
-      2020,
-      2024
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-  {
-    "country": "Vietnam",
-    "drivingSide": "right",
-    "euLicencePlate": false,
-    "lineMarkings": [
-      "Outside: White | Inside: White",
-      "Outside: White | Inside: White and yellow",
-      "Outside: White | Inside: Yellow"
-    ],
-    "coverageYears": [
-      2016,
-      2019,
-      2020,
-      2021,
-      2024,
-      2025
-    ],
-    "cameraGenerations": [
-      3,
-      4
-    ]
-  },
-];
+// Generated from data/*.ts — do not edit by hand.
+// Source files: driving-side.ts, road-lines.ts, geo-car-helpdesk.ts
+(function () {
+
+  // ── line pattern display labels (from road-lines.ts linePatternLabels) ────
+  window.LINE_PATTERN_LABELS = {
+    "yellow-white":      "Outside: Yellow | Inside: White",
+    "white-white":       "Outside: White | Inside: White",
+    "white-yellow":      "Outside: White | Inside: Yellow",
+    "yellow-yellow":     "Outside: Yellow | Inside: Yellow",
+    "white-whiteyellow": "Outside: White | Inside: White & Yellow",
+    "yellow-whiteyellow":"Outside: Yellow | Inside: White & Yellow",
+    "white-whitegreen":  "Outside: White | Inside: White & Green",
+    "red-white":         "Outside: Red | Inside: White",
+    "red-yellow":        "Outside: Red | Inside: Yellow",
+    "blue-orange":       "Outside: Blue | Inside: Orange",
+    "blue-white":        "Outside: Blue | Inside: White",
+    "blue-blue":         "Outside: Blue | Inside: Blue",
+  };
+
+  // ── driving side (from driving-side.ts) ───────────────────────────────────
+  const _drivingSide = {
+    "Åland":"right","Albania":"right","American Samoa":"right","Andorra":"right",
+    "Argentina":"right","Australia":"left","Austria":"right","Bangladesh":"left",
+    "Belgium":"right","Bermuda":"left","Bhutan":"left","Bolivia":"right",
+    "Bosnia and Herzegovina":"right","Botswana":"left","Brazil":"right","Bulgaria":"right",
+    "Cambodia":"right","Canada":"right","Chile":"right","China":"right",
+    "Christmas Island":"left","Cocos (Keeling) Islands":"left","Colombia":"right",
+    "Costa Rica":"right","Croatia":"right","Curaçao":"right","Cyprus":"left",
+    "Czech Republic":"right","Denmark":"right","Dominican Republic":"right","Ecuador":"right",
+    "Egypt":"right","Estonia":"right","Eswatini":"left","Falkland Islands":"left",
+    "Faroe Islands":"right","Finland":"right","France":"right","Germany":"right",
+    "Ghana":"right","Gibraltar":"right","Greece":"right","Greenland":"right","Guam":"right",
+    "Guatemala":"right","Hong Kong":"left","Hungary":"right","Iceland":"right","India":"left",
+    "Indonesia":"left","Iraq":"right","Ireland":"left","Isle of Man":"left","Israel":"right",
+    "Italy":"right","Japan":"left","Jersey":"left","Jordan":"right","Kazakhstan":"right",
+    "Kenya":"left","Kyrgyzstan":"right","Laos":"right","Latvia":"right","Lebanon":"right",
+    "Lesotho":"left","Liechtenstein":"right","Lithuania":"right","Luxembourg":"right",
+    "Macao":"left","Madagascar":"right","Malaysia":"left","Malta":"left","Mexico":"right",
+    "Monaco":"right","Mongolia":"right","Montenegro":"right","Namibia":"left","Nepal":"left",
+    "Netherlands":"right","New Zealand":"left","Nigeria":"right","North Macedonia":"right",
+    "Northern Mariana Islands":"right","Norway":"right","Oman":"right","Pakistan":"left",
+    "Palestine":"right","Panama":"right","Papua New Guinea":"left","Paraguay":"right",
+    "Peru":"right","Philippines":"right","Pitcairn Islands":"left","Poland":"right",
+    "Portugal":"right","Puerto Rico":"right","Qatar":"right","Réunion":"right","Romania":"right",
+    "Russia":"right","Rwanda":"right","Samoa":"left","San Marino":"right",
+    "São Tomé and Príncipe":"right","Senegal":"right","Serbia":"right","Singapore":"left",
+    "Slovakia":"right","Slovenia":"right","South Africa":"left","South Korea":"right",
+    "South Sudan":"right","Spain":"right","Sri Lanka":"left","Svalbard and Jan Mayen":"right",
+    "Sweden":"right","Switzerland":"right","Taiwan":"right","Thailand":"left","Tunisia":"right",
+    "Turkey":"right","Uganda":"left","Ukraine":"right","United Arab Emirates":"right",
+    "United Kingdom":"left","United States":"right","United States Minor Outlying Islands":"right",
+    "United States Virgin Islands":"left","Uruguay":"right","Vietnam":"right",
+  };
+
+  // ── EU blue licence plate (from geo-car-helpdesk.ts euPlateData) ──────────
+  const _euPlate = {
+    "Åland":false,"Albania":true,"American Samoa":false,"Andorra":false,"Argentina":false,
+    "Australia":false,"Austria":true,"Bangladesh":false,"Belgium":true,"Bermuda":false,
+    "Bhutan":false,"Bolivia":false,"Bosnia and Herzegovina":true,"Botswana":false,
+    "Brazil":false,"Bulgaria":true,"Cambodia":false,"Canada":false,"Chile":false,
+    "China":false,"Christmas Island":false,"Cocos (Keeling) Islands":false,"Colombia":false,
+    "Costa Rica":false,"Croatia":false,"Curaçao":false,"Cyprus":true,"Czech Republic":true,
+    "Denmark":true,"Dominican Republic":false,"Ecuador":false,"Egypt":false,"Estonia":true,
+    "Eswatini":false,"Falkland Islands":false,"Faroe Islands":true,"Finland":true,"France":true,
+    "Germany":true,"Ghana":false,"Gibraltar":true,"Greece":true,"Greenland":false,"Guam":false,
+    "Guatemala":false,"Hong Kong":false,"Hungary":true,"Iceland":false,"India":false,
+    "Indonesia":false,"Iraq":false,"Ireland":true,"Isle of Man":false,"Israel":false,
+    "Italy":true,"Japan":false,"Jersey":false,"Jordan":false,"Kazakhstan":false,"Kenya":false,
+    "Kyrgyzstan":false,"Laos":false,"Latvia":true,"Lebanon":false,"Lesotho":false,
+    "Liechtenstein":false,"Lithuania":true,"Luxembourg":true,"Macao":false,"Madagascar":false,
+    "Malaysia":false,"Malta":true,"Mexico":false,"Monaco":false,"Mongolia":false,
+    "Montenegro":false,"Namibia":false,"Nepal":false,"Netherlands":true,"New Zealand":false,
+    "Nigeria":false,"North Macedonia":true,"Northern Mariana Islands":false,"Norway":true,
+    "Oman":false,"Pakistan":false,"Palestine":false,"Panama":false,"Papua New Guinea":false,
+    "Paraguay":false,"Peru":false,"Philippines":false,"Pitcairn Islands":false,"Poland":true,
+    "Portugal":true,"Puerto Rico":false,"Qatar":false,"Réunion":false,"Romania":true,
+    "Russia":false,"Rwanda":false,"Samoa":false,"San Marino":false,"São Tomé and Príncipe":false,
+    "Senegal":false,"Serbia":true,"Singapore":false,"Slovakia":true,"Slovenia":true,
+    "South Africa":false,"South Korea":false,"South Sudan":false,"Spain":true,"Sri Lanka":false,
+    "Svalbard and Jan Mayen":false,"Sweden":true,"Switzerland":false,"Taiwan":false,
+    "Thailand":false,"Tunisia":false,"Turkey":true,"Uganda":false,"Ukraine":true,
+    "United Arab Emirates":false,"United Kingdom":true,"United States":false,
+    "United States Minor Outlying Islands":false,"United States Virgin Islands":false,
+    "Uruguay":false,"Vietnam":false,
+  };
+
+  // ── road line patterns (from road-lines.ts roadLinesData) ─────────────────
+  const _lineMarkings = {
+    "Australia":["yellow-white","white-white","yellow-yellow"],
+    "Botswana":["yellow-white"],
+    "Chile":["yellow-white","white-white","white-yellow","yellow-yellow"],
+    "Eswatini":["yellow-white","yellow-whiteyellow"],
+    "France":["yellow-white","white-white","white-whiteyellow"],
+    "Gibraltar":["yellow-white","white-white"],
+    "Hungary":["yellow-white","white-white"],
+    "India":["yellow-white","white-white","yellow-yellow"],
+    "Ireland":["yellow-white"],
+    "Isle of Man":["yellow-white","white-white"],
+    "Israel":["yellow-white"],
+    "Jersey":["yellow-white"],
+    "Jordan":["yellow-white"],
+    "Kazakhstan":["yellow-white","white-white"],
+    "Lesotho":["yellow-white"],
+    "Lithuania":["yellow-white","white-white"],
+    "Malaysia":["yellow-white","white-white"],
+    "Mexico":["yellow-white","white-white","white-yellow"],
+    "Montenegro":["yellow-white","white-white"],
+    "Namibia":["yellow-white","red-white"],
+    "Nepal":["yellow-white"],
+    "New Zealand":["yellow-white","white-white","white-yellow","yellow-yellow","white-whiteyellow"],
+    "Nigeria":["yellow-white"],
+    "Oman":["yellow-white","yellow-yellow"],
+    "Palestine":["yellow-white"],
+    "Portugal":["yellow-white","white-white"],
+    "Russia":["yellow-white","white-white","white-yellow"],
+    "Singapore":["yellow-white","white-white"],
+    "South Africa":["yellow-white","red-white"],
+    "Spain":["yellow-white","white-white","blue-white"],
+    "Sri Lanka":["yellow-white","white-white"],
+    "Turkey":["yellow-white","white-white","white-yellow","yellow-yellow","white-whiteyellow"],
+    "United Arab Emirates":["yellow-white","yellow-yellow"],
+    "United Kingdom":["yellow-white","white-white","red-white"],
+    "Albania":["white-white","white-yellow"],
+    "Andorra":["white-white"],
+    "Argentina":["white-white","white-yellow","white-whiteyellow"],
+    "Austria":["white-white","white-yellow"],
+    "Bangladesh":["white-white"],
+    "Belgium":["white-white"],
+    "Bhutan":["white-white"],
+    "Bolivia":["white-white","white-yellow"],
+    "Bosnia and Herzegovina":["white-white"],
+    "Brazil":["white-white","white-yellow","yellow-yellow","blue-blue"],
+    "Bulgaria":["white-white"],
+    "Christmas Island":["white-white"],
+    "Croatia":["white-white"],
+    "Curaçao":["white-white"],
+    "Cyprus":["white-white"],
+    "Czech Republic":["white-white"],
+    "Denmark":["white-white"],
+    "Estonia":["white-white"],
+    "Faroe Islands":["white-white"],
+    "Finland":["white-white","white-yellow","white-whiteyellow"],
+    "Germany":["white-white"],
+    "Ghana":["white-white"],
+    "Greece":["white-white","white-yellow"],
+    "Greenland":["white-white"],
+    "Iceland":["white-white"],
+    "Indonesia":["white-white","white-yellow","yellow-yellow"],
+    "Italy":["white-white"],
+    "Japan":["white-white","white-yellow","white-whiteyellow"],
+    "Kenya":["white-white","white-yellow"],
+    "Kyrgyzstan":["white-white"],
+    "Laos":["white-white"],
+    "Latvia":["white-white"],
+    "Liechtenstein":["white-white"],
+    "Luxembourg":["white-white"],
+    "Madagascar":["white-white"],
+    "Malta":["white-white"],
+    "Monaco":["white-white"],
+    "Mongolia":["white-white"],
+    "Netherlands":["white-white","white-whitegreen"],
+    "North Macedonia":["white-white","yellow-yellow"],
+    "Peru":["white-white","white-yellow"],
+    "Philippines":["white-white","white-yellow","white-whiteyellow","blue-orange","blue-white"],
+    "Poland":["white-white"],
+    "Qatar":["white-white","white-yellow"],
+    "Romania":["white-white","yellow-yellow"],
+    "Rwanda":["white-white","white-yellow"],
+    "San Marino":["white-white"],
+    "Senegal":["white-white"],
+    "Serbia":["white-white"],
+    "Slovakia":["white-white"],
+    "Slovenia":["white-white"],
+    "South Korea":["white-white","white-yellow","yellow-yellow"],
+    "Sweden":["white-white"],
+    "Switzerland":["white-white"],
+    "São Tomé and Príncipe":["white-white"],
+    "Tunisia":["white-white"],
+    "Uganda":["white-white","white-yellow"],
+    "Ukraine":["white-white"],
+    "Uruguay":["white-white","white-whiteyellow"],
+    "Vietnam":["white-white","white-yellow","white-whiteyellow"],
+    "American Samoa":["white-yellow"],
+    "Cambodia":["white-yellow"],
+    "Canada":["white-yellow"],
+    "Colombia":["white-yellow"],
+    "Costa Rica":["white-yellow"],
+    "Dominican Republic":["white-yellow"],
+    "Ecuador":["white-yellow"],
+    "Guam":["white-yellow"],
+    "Guatemala":["white-yellow"],
+    "Lebanon":["white-yellow"],
+    "Northern Mariana Islands":["white-yellow"],
+    "Norway":["white-yellow"],
+    "Panama":["white-yellow"],
+    "Paraguay":["white-yellow"],
+    "Puerto Rico":["white-yellow"],
+    "Taiwan":["white-yellow","yellow-yellow","red-yellow","blue-blue"],
+    "Thailand":["white-yellow"],
+    "United States":["white-yellow"],
+    "Hong Kong":["yellow-yellow"],
+  };
+
+  // ── coverage years (from geo-car-helpdesk.ts coverageYearsData) ───────────
+  const _coverageYears = {
+    "Åland":[2009,2013,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Albania":[2016,2019,2020,2021,2022,2024,2025,2026],
+    "American Samoa":[2015,2016,2017,2019,2021,2022,2023,2024,2025],
+    "Andorra":[2013,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Argentina":[2014,2015,2016,2017,2018,2019,2020,2022,2023,2024,2025],
+    "Australia":[2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Austria":[2012,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Bangladesh":[2015,2016,2019,2020,2022,2023,2024,2025],
+    "Belgium":[2013,2017,2018,2019,2020,2021,2023,2024,2025],
+    "Bermuda":[2015,2016,2019,2020,2021,2022,2023,2024],
+    "Bhutan":[2014,2016,2017,2018,2019,2021,2022,2024,2025],
+    "Bolivia":[2015,2016,2017,2018,2019,2020,2021,2022,2024,2025],
+    "Bosnia and Herzegovina":[2024,2025,2026],
+    "Botswana":[2012,2013,2014,2016,2017,2019,2020,2021,2022,2024,2025],
+    "Brazil":[2009,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
+    "Bulgaria":[2013,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Cambodia":[2014,2015,2016,2017,2019,2020,2021,2022,2023,2024,2025],
+    "Canada":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Chile":[2013,2014,2015,2016,2019,2020,2023,2024,2025],
+    "China":[2019,2020,2021],
+    "Christmas Island":[],
+    "Cocos (Keeling) Islands":[],
+    "Colombia":[2013,2014,2015,2016,2019,2020,2023,2024,2025],
+    "Costa Rica":[2020,2024,2025],
+    "Croatia":[2012,2013,2014,2016,2019,2020,2021,2022,2023,2024,2025],
+    "Curaçao":[2018,2019,2021,2022,2024,2025],
+    "Cyprus":[2025],
+    "Czech Republic":[2009,2010,2012,2013,2015,2017,2019,2020,2021,2022,2023,2024,2025],
+    "Denmark":[2011,2012,2013,2014,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Dominican Republic":[2020,2021,2022,2024,2025],
+    "Ecuador":[2015,2016,2017,2018,2019,2020,2021,2023,2024,2025],
+    "Egypt":[],
+    "Estonia":[2012,2013,2014,2016,2017,2019,2020,2021,2022,2023,2024,2025],
+    "Eswatini":[2013,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Falkland Islands":[2025],
+    "Faroe Islands":[2024,2025],
+    "Finland":[2012,2013,2014,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "France":[2009,2010,2011,2012,2013,2014,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Germany":[2010,2013,2019,2020,2021,2022,2023,2024,2025],
+    "Ghana":[2017,2019,2021,2022,2024,2025],
+    "Gibraltar":[2012,2015,2019,2020,2021,2022,2024,2025],
+    "Greece":[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Greenland":[2015,2016,2019,2020,2021,2022,2024,2025],
+    "Guam":[],
+    "Guatemala":[2017,2019,2021,2022,2023,2024,2025],
+    "Hong Kong":[2012,2013,2014,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Hungary":[2013,2014,2016,2018,2019,2021,2022,2023,2024,2025],
+    "Iceland":[2013,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "India":[2013,2014,2020,2023,2024,2025],
+    "Indonesia":[2016,2017,2019,2020,2021,2022,2023,2024,2025],
+    "Iraq":[2020],
+    "Ireland":[2011,2012,2013,2014,2017,2019,2020,2022,2024,2025],
+    "Isle of Man":[2011,2013,2014,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Israel":[2012,2013,2014,2015,2016,2017,2019,2020,2021,2022,2023,2024,2025],
+    "Italy":[2010,2012,2013,2014,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Japan":[2009,2011,2012,2013,2014,2016,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Jersey":[2011,2013,2014,2016,2018,2019,2020,2021,2022,2024,2025],
+    "Jordan":[2017,2018,2019,2020,2021,2022,2023,2024],
+    "Kazakhstan":[2023,2024,2025],
+    "Kenya":[2018,2019,2022,2023,2024,2025],
+    "Kyrgyzstan":[2016,2017,2018,2019,2020,2021,2022,2023,2024],
+    "Laos":[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Latvia":[2013,2014,2016,2019,2020,2021,2022,2023,2024,2025],
+    "Lebanon":[2020,2023,2024,2025],
+    "Lesotho":[2017,2019,2020,2021,2022,2023,2024,2025],
+    "Liechtenstein":[2024,2025],
+    "Lithuania":[2013,2014,2016,2019,2020,2021,2022,2024,2025],
+    "Luxembourg":[2014,2017,2019,2020,2021,2022,2023,2024,2025],
+    "Macao":[2013,2017,2018,2019,2021,2022,2024],
+    "Madagascar":[2020],
+    "Malaysia":[2013,2015,2016,2018,2019,2020,2021,2025],
+    "Malta":[2016,2018,2019,2020,2021,2022,2024],
+    "Mexico":[2012,2013,2015,2016,2017,2018,2019,2020,2022,2023,2024,2025],
+    "Monaco":[2013,2016,2019,2021,2024],
+    "Mongolia":[2015,2016,2017,2018,2019,2021,2024,2025],
+    "Montenegro":[2016,2019,2021,2024,2025,2026],
+    "Namibia":[2024,2025],
+    "Nepal":[2020,2024,2025],
+    "Netherlands":[2009,2010,2013,2015,2016,2018,2019,2020,2022,2023,2024,2025],
+    "New Zealand":[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Nigeria":[2017,2019,2020,2021,2022,2024,2025],
+    "North Macedonia":[2015,2016,2017,2019,2020,2021,2022,2024],
+    "Northern Mariana Islands":[],
+    "Norway":[2010,2011,2012,2015,2016,2017,2018,2019,2020,2021,2022,2024,2025],
+    "Oman":[2024,2025],
+    "Pakistan":[],
+    "Palestine":[2012,2014,2017,2018,2019,2020,2021,2022,2024],
+    "Panama":[2023,2024,2025],
+    "Papua New Guinea":[],
+    "Paraguay":[2025,2026],
+    "Peru":[2013,2014,2015,2016,2017,2019,2020,2022,2023,2024,2025],
+    "Philippines":[2016,2017,2018,2019,2020,2022,2023,2024,2025],
+    "Pitcairn Islands":[2013,2020],
+    "Poland":[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Portugal":[2013,2014,2015,2017,2019,2020,2021,2023,2024,2025],
+    "Puerto Rico":[2016,2019,2020,2021,2023,2024,2025],
+    "Qatar":[2020,2022,2023,2024,2025],
+    "Réunion":[],
+    "Romania":[2013,2014,2017,2019,2020,2021,2022,2023,2024],
+    "Russia":[2012,2013,2016,2017,2018,2019,2020,2021,2022,2024,2025],
+    "Rwanda":[2022,2023,2024,2025],
+    "Samoa":[],
+    "San Marino":[2012,2013,2016,2017,2018,2019,2020,2021,2022,2023,2024],
+    "São Tomé and Príncipe":[2023,2024],
+    "Senegal":[2017,2019,2020,2022,2023,2024,2025],
+    "Serbia":[2014,2015,2016,2017,2019,2020,2021,2022,2024],
+    "Singapore":[2019,2020,2021,2022,2023,2024],
+    "Slovakia":[2012,2013,2014,2015,2018,2019,2020,2021,2023,2024,2025],
+    "Slovenia":[2013,2014,2017,2019,2020,2022,2023,2024],
+    "South Africa":[2009,2010,2011,2012,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "South Korea":[2018,2019,2020,2021,2022,2024],
+    "South Sudan":[],
+    "Spain":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
+    "Sri Lanka":[2016,2019,2020,2021,2022,2023,2024,2025],
+    "Svalbard and Jan Mayen":[2020],
+    "Sweden":[2011,2012,2013,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Switzerland":[2011,2012,2014,2015,2017,2019,2020,2021,2022,2024,2025],
+    "Taiwan":[2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025],
+    "Thailand":[2015,2016,2017,2019,2020,2021,2022,2023,2025],
+    "Tunisia":[2016,2019,2020,2021,2022,2023,2024],
+    "Turkey":[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "Uganda":[2015,2019,2020,2021,2022,2023,2024],
+    "Ukraine":[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2024,2025],
+    "United Arab Emirates":[2014,2015,2016,2017,2019,2020,2021,2022,2023,2024,2025],
+    "United Kingdom":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "United States":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "United States Minor Outlying Islands":[2012,2013],
+    "United States Virgin Islands":[2016,2017,2019,2021,2022,2023,2024],
+    "Uruguay":[2015,2016,2017,2019,2020,2024],
+    "Vietnam":[2016,2019,2020,2021,2024,2025],
+  };
+
+  // ── camera generations (from geo-car-helpdesk.ts cameraGenData) ───────────
+  const _cameraGens = {
+    "Åland":[2,3],"Albania":[3],"American Samoa":[3],"Andorra":[2,3],"Argentina":[3,4],
+    "Australia":[1,2,3,4],"Austria":[2,3,4],"Bangladesh":[3,4],"Belgium":[2,3,4],
+    "Bermuda":[3],"Bhutan":[3],"Bolivia":[3,4],"Bosnia and Herzegovina":[4],"Botswana":[3],
+    "Brazil":[2,3,4],"Bulgaria":[3,4],"Cambodia":[3],"Canada":[1,2,3,4],"Chile":[3,4],
+    "China":[],"Christmas Island":[3],"Cocos (Keeling) Islands":[3],"Colombia":[3,4],
+    "Costa Rica":[4],"Croatia":[3,4],"Curaçao":[3],"Cyprus":[],"Czech Republic":[2,3,4],
+    "Denmark":[2,3,4],"Dominican Republic":[3],"Ecuador":[3,4],"Egypt":[],"Estonia":[3,4],
+    "Eswatini":[3],"Falkland Islands":[],"Faroe Islands":[3,4],"Finland":[2,3,4],
+    "France":[1,2,3,4],"Germany":[2,3,4],"Ghana":[3],"Gibraltar":[3],"Greece":[2,3,4],
+    "Greenland":[3],"Guam":[3],"Guatemala":[3],"Hong Kong":[2,3,4],"Hungary":[2,3,4],
+    "Iceland":[3,4],"India":[3,4],"Indonesia":[3,4],"Iraq":[],"Ireland":[2,3,4],
+    "Isle of Man":[2],"Israel":[2,3,4],"Italy":[1,2,3,4],"Japan":[1,2,3,4],"Jersey":[2],
+    "Jordan":[3],"Kazakhstan":[3,4],"Kenya":[3,4],"Kyrgyzstan":[3],"Laos":[3],
+    "Latvia":[3,4],"Lebanon":[],"Lesotho":[3],"Liechtenstein":[4],"Lithuania":[3,4],
+    "Luxembourg":[2,3,4],"Macao":[2],"Madagascar":[3],"Malaysia":[3,4],"Malta":[3,4],
+    "Mexico":[1,2,3,4],"Monaco":[1,2,3,4],"Mongolia":[3,4],"Montenegro":[3],"Namibia":[4],
+    "Nepal":[],"Netherlands":[2,3,4],"New Zealand":[1,2,3,4],"Nigeria":[3,4],
+    "North Macedonia":[3],"Northern Mariana Islands":[3],"Norway":[2,3,4],"Oman":[4],
+    "Pakistan":[3],"Palestine":[3,4],"Panama":[4],"Papua New Guinea":[],"Paraguay":[4],
+    "Peru":[3,4],"Philippines":[3,4],"Pitcairn Islands":[],"Poland":[2,3,4],
+    "Portugal":[2,3,4],"Puerto Rico":[3],"Qatar":[4],"Réunion":[],"Romania":[2,3,4],
+    "Russia":[2,3,4],"Rwanda":[4],"Samoa":[],"San Marino":[2,3,4],"São Tomé and Príncipe":[],
+    "Senegal":[3,4],"Serbia":[3,4],"Singapore":[2,3,4],"Slovakia":[3,4],"Slovenia":[2,3,4],
+    "South Africa":[2,3,4],"South Korea":[2,3],"South Sudan":[],"Spain":[2,3,4],
+    "Sri Lanka":[3,4],"Svalbard and Jan Mayen":[],"Sweden":[2,3,4],"Switzerland":[2,3,4],
+    "Taiwan":[2,3,4],"Thailand":[3,4],"Tunisia":[3],"Turkey":[3,4],"Uganda":[3],
+    "Ukraine":[3],"United Arab Emirates":[3,4],"United Kingdom":[2,3,4],
+    "United States":[1,2,3,4],"United States Minor Outlying Islands":[],"United States Virgin Islands":[3],
+    "Uruguay":[3,4],"Vietnam":[3,4],
+  };
+
+  // ── car colors (from geo-car-helpdesk.ts carColorData; default "white") ───
+  const _carColors = {
+    "Argentina":["black","blue"],"Australia":["blue"],"Bangladesh":["black","white"],
+    "Belgium":["red"],"Bermuda":["white","black"],"Bolivia":["black","white"],
+    "Brazil":["white","blue","striped"],"Bulgaria":["white","black"],"Cambodia":["striped","white"],
+    "Canada":["white","black","striped","blue"],"Colombia":["white","black","gray"],
+    "Croatia":["black","white"],"Curaçao":["black"],"Czech Republic":["black","red","white"],
+    "Ecuador":["black","white"],"Germany":["black"],"Greenland":["gray"],"Guam":["red"],
+    "Greece":["white","black"],"Hungary":["black"],"Indonesia":["white"],
+    "Israel":["white","black"],"Japan":["black"],"Jordan":["black"],
+    "Kenya":["white","gray"],"Latvia":["white","black"],"Lebanon":["black"],
+    "Lithuania":["white","black"],"Madagascar":["blue"],"Malaysia":["gray"],
+    "Mexico":["white","black","striped","blue"],"Namibia":["red"],
+    "Netherlands":["white","black"],"Northern Mariana Islands":["red"],"Oman":["red"],
+    "Pakistan":["gray"],"Palestine":["white","black"],"Panama":["black"],
+    "Peru":["white","black"],"Philippines":["gray"],"Portugal":["white","blue"],
+    "Qatar":["red"],"Russia":["white","black"],"Rwanda":["white","black"],
+    "Senegal":["white","gray"],"Slovakia":["black","red"],"Slovenia":["black"],
+    "South Africa":["white","blue"],"Spain":["black"],"Svalbard and Jan Mayen":["red"],
+    "Sweden":["blue","white"],"Taiwan":["black"],"Tunisia":["black"],
+    "Uganda":["white"],"Ukraine":["red"],"United Arab Emirates":["black","white"],
+    "United States Virgin Islands":["red","white"],"Uruguay":["black"],
+  };
+
+  // ── vehicle type (from geo-car-helpdesk.ts vehicleTypeData; default "car") ─
+  const _vehicleType = {
+    "American Samoa":"truck","Australia":"truck","Brazil":"truck","Canada":"truck",
+    "Chile":"truck","Christmas Island":"truck","Colombia":"truck","Costa Rica":"truck",
+    "Ecuador":"truck","Faroe Islands":"truck","Greenland":"truck","Iceland":"truck",
+    "Indonesia":"truck","Kazakhstan":"truck","Kenya":"truck","Mexico":"truck",
+    "Mongolia":"truck","Namibia":"truck","Nepal":"truck","New Zealand":"truck",
+    "Nigeria":"truck","North Macedonia":"truck","Oman":"truck","Panama":"truck",
+    "Paraguay":"truck","Peru":"truck","Puerto Rico":"truck","Qatar":"truck",
+    "Rwanda":"truck","Senegal":"truck","Taiwan":"truck","Turkey":"truck",
+    "Uganda":"suv","United Arab Emirates":"truck","United States":"truck",
+    "United States Virgin Islands":"truck",
+  };
+
+  // ── hemisphere (geographic; "both" = straddles equator) ───────────────────
+  const _hemisphere = {
+    "Åland":"north","Albania":"north","American Samoa":"south","Andorra":"north",
+    "Argentina":"south","Australia":"south","Austria":"north","Bangladesh":"north",
+    "Belgium":"north","Bermuda":"north","Bhutan":"north","Bolivia":"south",
+    "Bosnia and Herzegovina":"north","Botswana":"south","Brazil":"both","Bulgaria":"north",
+    "Cambodia":"north","Canada":"north","Chile":"south","China":"north",
+    "Christmas Island":"south","Cocos (Keeling) Islands":"south","Colombia":"both",
+    "Costa Rica":"north","Croatia":"north","Curaçao":"north","Cyprus":"north",
+    "Czech Republic":"north","Denmark":"north","Dominican Republic":"north","Ecuador":"both",
+    "Egypt":"north","Estonia":"north","Eswatini":"south","Falkland Islands":"south",
+    "Faroe Islands":"north","Finland":"north","France":"north","Germany":"north",
+    "Ghana":"north","Gibraltar":"north","Greece":"north","Greenland":"north","Guam":"north",
+    "Guatemala":"north","Hong Kong":"north","Hungary":"north","Iceland":"north","India":"north",
+    "Indonesia":"both","Iraq":"north","Ireland":"north","Isle of Man":"north","Israel":"north",
+    "Italy":"north","Japan":"north","Jersey":"north","Jordan":"north","Kazakhstan":"north",
+    "Kenya":"both","Kyrgyzstan":"north","Laos":"north","Latvia":"north","Lebanon":"north",
+    "Lesotho":"south","Liechtenstein":"north","Lithuania":"north","Luxembourg":"north",
+    "Macao":"north","Madagascar":"south","Malaysia":"both","Malta":"north","Mexico":"north",
+    "Monaco":"north","Mongolia":"north","Montenegro":"north","Namibia":"south","Nepal":"north",
+    "Netherlands":"north","New Zealand":"south","Nigeria":"north","North Macedonia":"north",
+    "Northern Mariana Islands":"north","Norway":"north","Oman":"north","Pakistan":"north",
+    "Palestine":"north","Panama":"north","Papua New Guinea":"south","Paraguay":"south",
+    "Peru":"both","Philippines":"north","Pitcairn Islands":"south","Poland":"north",
+    "Portugal":"north","Puerto Rico":"north","Qatar":"north","Réunion":"south","Romania":"north",
+    "Russia":"north","Rwanda":"south","Samoa":"south","San Marino":"north",
+    "São Tomé and Príncipe":"both","Senegal":"north","Serbia":"north","Singapore":"north",
+    "Slovakia":"north","Slovenia":"north","South Africa":"south","South Korea":"north",
+    "South Sudan":"north","Spain":"north","Sri Lanka":"north","Svalbard and Jan Mayen":"north",
+    "Sweden":"north","Switzerland":"north","Taiwan":"north","Thailand":"north","Tunisia":"north",
+    "Turkey":"north","Uganda":"both","Ukraine":"north","United Arab Emirates":"north",
+    "United Kingdom":"north","United States":"north","United States Minor Outlying Islands":"both",
+    "United States Virgin Islands":"north","Uruguay":"south","Vietnam":"north",
+  };
+
+  // ── assemble ──────────────────────────────────────────────────────────────
+  const countries = [
+    "Åland","Albania","American Samoa","Andorra","Argentina","Australia","Austria",
+    "Bangladesh","Belgium","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana",
+    "Brazil","Bulgaria","Cambodia","Canada","Chile","China","Christmas Island",
+    "Cocos (Keeling) Islands","Colombia","Costa Rica","Croatia","Curaçao","Cyprus",
+    "Czech Republic","Denmark","Dominican Republic","Ecuador","Egypt","Estonia","Eswatini",
+    "Falkland Islands","Faroe Islands","Finland","France","Germany","Ghana","Gibraltar",
+    "Greece","Greenland","Guam","Guatemala","Hong Kong","Hungary","Iceland","India",
+    "Indonesia","Iraq","Ireland","Isle of Man","Israel","Italy","Japan","Jersey","Jordan",
+    "Kazakhstan","Kenya","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liechtenstein",
+    "Lithuania","Luxembourg","Macao","Madagascar","Malaysia","Malta","Mexico","Monaco",
+    "Mongolia","Montenegro","Namibia","Nepal","Netherlands","New Zealand","Nigeria",
+    "North Macedonia","Northern Mariana Islands","Norway","Oman","Pakistan","Palestine",
+    "Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn Islands","Poland",
+    "Portugal","Puerto Rico","Qatar","Réunion","Romania","Russia","Rwanda","Samoa",
+    "San Marino","São Tomé and Príncipe","Senegal","Serbia","Singapore","Slovakia","Slovenia",
+    "South Africa","South Korea","South Sudan","Spain","Sri Lanka","Svalbard and Jan Mayen",
+    "Sweden","Switzerland","Taiwan","Thailand","Tunisia","Turkey","Uganda","Ukraine",
+    "United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands",
+    "United States Virgin Islands","Uruguay","Vietnam",
+  ];
+
+  window.COUNTRY_FILTER_DATA = countries.map(function (name) {
+    return {
+      country:          name,
+      drivingSide:      _drivingSide[name]   ?? null,
+      euLicencePlate:   _euPlate[name]       ?? null,
+      lineMarkings:     _lineMarkings[name]  ?? [],
+      coverageYears:    _coverageYears[name] ?? [],
+      cameraGenerations:_cameraGens[name]    ?? [],
+      carColors:        _carColors[name]     ?? ["white"],
+      vehicleType:      _vehicleType[name]   ?? "car",
+      hemisphere:       _hemisphere[name]    ?? "north",
+    };
+  });
+})();

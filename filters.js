@@ -1,123 +1,26 @@
 (function () {
   const countries = window.COUNTRY_FILTER_DATA || [];
+  const labels = window.LINE_PATTERN_LABELS || {};
   const controls = {
-    drivingSide: document.getElementById("drivingSideFilter"),
-    euPlate: document.getElementById("euPlateFilter"),
-    lineMarking: document.getElementById("lineMarkingFilter"),
-    year: document.getElementById("year"),
+    drivingSide:      document.getElementById("drivingSideFilter"),
+    euPlate:          document.getElementById("euPlateFilter"),
+    lineMarking:      document.getElementById("lineMarkingFilter"),
+    year:             document.getElementById("year"),
     cameraGeneration: document.getElementById("cameraGenerationFilter"),
-    hemisphere: document.getElementById("hemisphereFilter"),
-    carColor: document.getElementById("carColorFilter"),
-    vehicleType: document.getElementById("vehicleTypeFilter"),
+    hemisphere:       document.getElementById("hemisphereFilter"),
+    carColor:         document.getElementById("carColorFilter"),
+    vehicleType:      document.getElementById("vehicleTypeFilter"),
   };
-
-  // Countries using a non-car vehicle. Unlisted countries default to "car".
-  // Sources: geodummy.com/camera-cars, geomastery.com/google-car
-  const VEHICLE_TYPE_DATA = {
-    "Christmas Island":            "truck",  // silver pickup/ute
-    "Nigeria":                     "truck",  // large white pickup with bars
-    "Qatar":                       "truck",  // white truck cab (look down)
-    "Senegal":                     "truck",  // silver truck cab (Gen 4)
-    "Uganda":                      "suv",    // boxy white SUV, square mirrors
-    "United States Virgin Islands": "truck", // bulky ute/pickup with tray
-    "Namibia": "truck",
-    "Paraguay": "truck",
-    "Costa Rica": "truck",
-    "Panama": "truck",
-    "Ecuador": "truck",
-    "Kenya": "truck",
-    "Oman": "truck",
-    "Kazakhstan": "truck",
-    "Turkey": "truck",
-  };
-
-  // Countries with non-white or mixed car colors. Unlisted countries default to ["white"].
-  // Sources: geodummy.com/camera-cars, dingyiyi0226.github.io/geoguessr-note
-  const CAR_COLOR_DATA = {
-    "Argentina":   ["black", "blue"],  // Gen 3 black, Gen 4 white
-    "Belgium":     ["red"],
-    "Bermuda":     ["white", "black"],
-    "Brazil":      ["white", "blue", "striped"],
-    "Bulgaria":    ["white", "black"],  // Gen 4 partly black
-    "Canada":      ["white", "black", "striped", "blue"],
-    "Colombia":    ["white", "black", "gray"],  // Gen 3 black
-    "Greece":      ["white", "black"],  // Gen 4 black
-    "Israel":      ["white", "black"],  // black car with antenna (Russia-style)
-    "Jordan":      ["black"],
-    "Latvia":      ["white", "black"],  // Gen 4 partly black
-    "Lithuania":   ["white", "black"],  // mostly black in recent coverage
-    "Netherlands": ["white", "black"],  // Gen 4 partly black (2023)
-    "Kenya":       ["white", "gray"],
-    "Mexico":      ["white", "black", "striped", "blue"],
-    "Palestine":   ["white", "black"],  // black car with antenna
-    "Peru":        ["white", "black"],  // Gen 3 black
-    "Portugal":    ["white", "blue"],
-    "Russia":      ["white", "black"],  // distinctive black car with antenna
-    "Senegal":     ["white", "gray"],
-    "South Africa":["white", "blue"],
-    "Rwanda":      ["white", "black"],  // can be white, black, or grey
-    "Ukraine":     ["red"],
-    "Uruguay":     ["black"],  // Gen 3 black
-  };
-
-  // "both" = country straddles the equator and appears in north and south searches
-  const HEMISPHERE_DATA = {
-    "Åland": "north", "Albania": "north", "American Samoa": "south",
-    "Andorra": "north", "Argentina": "south", "Australia": "south",
-    "Austria": "north", "Bangladesh": "north", "Belgium": "north",
-    "Bermuda": "north", "Bhutan": "north", "Bolivia": "south",
-    "Bosnia and Herzegovina": "north", "Botswana": "south", "Brazil": "both",
-    "Bulgaria": "north", "Cambodia": "north", "Canada": "north",
-    "Chile": "south", "China": "north", "Christmas Island": "south",
-    "Cocos (Keeling) Islands": "south", "Colombia": "both", "Costa Rica": "north",
-    "Croatia": "north", "Curaçao": "north", "Cyprus": "north",
-    "Czech Republic": "north", "Denmark": "north", "Dominican Republic": "north",
-    "Ecuador": "both", "Egypt": "north", "Estonia": "north",
-    "Eswatini": "south", "Falkland Islands": "south", "Faroe Islands": "north",
-    "Finland": "north", "France": "north", "Germany": "north",
-    "Ghana": "north", "Gibraltar": "north", "Greece": "north",
-    "Greenland": "north", "Guam": "north", "Guatemala": "north",
-    "Hong Kong": "north", "Hungary": "north", "Iceland": "north",
-    "India": "north", "Indonesia": "both", "Iraq": "north",
-    "Ireland": "north", "Isle of Man": "north", "Israel": "north",
-    "Italy": "north", "Japan": "north", "Jersey": "north",
-    "Jordan": "north", "Kazakhstan": "north", "Kenya": "both",
-    "Kyrgyzstan": "north", "Laos": "north", "Latvia": "north",
-    "Lebanon": "north", "Lesotho": "south", "Liechtenstein": "north",
-    "Lithuania": "north", "Luxembourg": "north", "Macao": "north",
-    "Madagascar": "south", "Malaysia": "both", "Malta": "north",
-    "Mexico": "north", "Monaco": "north", "Mongolia": "north",
-    "Montenegro": "north", "Namibia": "south", "Nepal": "north",
-    "Netherlands": "north", "New Zealand": "south", "Nigeria": "north",
-    "North Macedonia": "north", "Northern Mariana Islands": "north", "Norway": "north",
-    "Oman": "north", "Pakistan": "north", "Palestine": "north",
-    "Panama": "north", "Papua New Guinea": "south", "Paraguay": "south",
-    "Peru": "both", "Philippines": "north", "Pitcairn Islands": "south",
-    "Poland": "north", "Portugal": "north", "Puerto Rico": "north",
-    "Qatar": "north", "Réunion": "south", "Romania": "north",
-    "Russia": "north", "Rwanda": "south", "Samoa": "south",
-    "San Marino": "north", "São Tomé and Príncipe": "both", "Senegal": "north",
-    "Serbia": "north", "Singapore": "north", "Slovakia": "north",
-    "Slovenia": "north", "South Africa": "south", "South Korea": "north",
-    "South Sudan": "north", "Spain": "north", "Sri Lanka": "north",
-    "Svalbard and Jan Mayen": "north", "Sweden": "north", "Switzerland": "north",
-    "Taiwan": "north", "Thailand": "north", "Tunisia": "north",
-    "Turkey": "north", "Uganda": "both", "Ukraine": "north",
-    "United Arab Emirates": "north", "United Kingdom": "north", "United States": "north",
-    "United States Minor Outlying Islands": "both", "United States Virgin Islands": "north",
-    "Uruguay": "south", "Vietnam": "north",
-  };
-  const resultCount = document.getElementById("resultCount");
+  const resultCount   = document.getElementById("resultCount");
   const countryResults = document.getElementById("countryResults");
-  const lineMarkingOptions = [
-    ...new Set(countries.flatMap((country) => country.lineMarkings || [])),
-  ].sort();
 
+  // Populate line marking options with human-readable labels
+  const lineMarkingOptions = [...new Set(countries.flatMap((c) => c.lineMarkings || []))].sort();
   controls.lineMarking.append(
-    ...lineMarkingOptions.map((lineMarking) => {
+    ...lineMarkingOptions.map((pattern) => {
       const option = document.createElement("option");
-      option.value = lineMarking;
-      option.textContent = lineMarking;
+      option.value = pattern;
+      option.textContent = labels[pattern] || pattern;
       return option;
     })
   );
@@ -147,27 +50,12 @@
     return countryYears.some((year) => year == filterYear);
   }
 
-  function hemisphereMatches(country, filterValue) {
-    if (filterValue === "any") return true;
-    const h = HEMISPHERE_DATA[country.country];
-    return h === filterValue || h === "both";
-  }
-
-  function carColorMatches(country, filterValue) {
-    if (filterValue === "any") return true;
-    const colors = CAR_COLOR_DATA[country.country] || ["white"];
-    return colors.includes(filterValue);
-  }
-
-  function vehicleTypeMatches(country, filterValue) {
-    if (filterValue === "any") return true;
-    const type = VEHICLE_TYPE_DATA[country.country] || "car";
-    return type === filterValue;
-  }
-
   function countryMatches(country) {
-    const year = Number(controls.year.value)
+    const year             = Number(controls.year.value);
     const cameraGeneration = controls.cameraGeneration.value;
+    const hemisphere       = controls.hemisphere.value;
+    const carColor         = controls.carColor.value;
+    const vehicleType      = controls.vehicleType.value;
 
     return (
       (controls.drivingSide.value === "any" || country.drivingSide === controls.drivingSide.value) &&
@@ -175,9 +63,9 @@
       (controls.lineMarking.value === "any" || country.lineMarkings.includes(controls.lineMarking.value)) &&
       yearsMatch(country.coverageYears, year) &&
       (cameraGeneration === "any" || country.cameraGenerations.includes(Number(cameraGeneration))) &&
-      hemisphereMatches(country, controls.hemisphere.value) &&
-      carColorMatches(country, controls.carColor.value) &&
-      vehicleTypeMatches(country, controls.vehicleType.value)
+      (hemisphere === "any" || country.hemisphere === hemisphere || country.hemisphere === "both") &&
+      (carColor === "any" || (country.carColors ?? ["white"]).includes(carColor)) &&
+      (vehicleType === "any" || country.vehicleType === vehicleType)
     );
   }
 
@@ -186,13 +74,18 @@
     return value ? "Yes" : "No";
   }
 
+  function listLineMarkings(markings) {
+    if (!markings.length) return "No data";
+    return markings.map((p) => labels[p] || p).join(", ");
+  }
+
   function listValue(values) {
     return values.length ? values.join(", ") : "No data";
   }
 
   function yearValue(years) {
     if (!years.length) return "No data";
-    return `${years[0]}-${years[years.length - 1]}`;
+    return `${years[0]}–${years[years.length - 1]}`;
   }
 
   function renderResults() {
@@ -206,11 +99,13 @@
         card.innerHTML = `
           <h3>${country.country}</h3>
           <dl>
-            <div><dt>Driving side</dt><dd>${country.drivingSide}</dd></div>
-            <div><dt>Has EU blue on plate</dt><dd>${yesNo(country.euLicencePlate)}</dd></div>
-            <div><dt>Line markings</dt><dd>${listValue(country.lineMarkings)}</dd></div>
+            <div><dt>Driving side</dt><dd>${country.drivingSide ?? "Unknown"}</dd></div>
+            <div><dt>EU blue plate</dt><dd>${yesNo(country.euLicencePlate)}</dd></div>
+            <div><dt>Line markings</dt><dd>${listLineMarkings(country.lineMarkings)}</dd></div>
             <div><dt>Coverage</dt><dd>${yearValue(country.coverageYears)}</dd></div>
             <div><dt>Camera gen</dt><dd>${listValue(country.cameraGenerations)}</dd></div>
+            <div><dt>Car color</dt><dd>${listValue(country.carColors ?? ["white"])}</dd></div>
+            <div><dt>Vehicle type</dt><dd>${country.vehicleType ?? "car"}</dd></div>
           </dl>
         `;
         return card;

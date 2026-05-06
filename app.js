@@ -52,6 +52,8 @@
       "Dem. Rep. Congo": "Democratic Republic of the Congo",
       "Dominican Rep.": "Dominican Republic",
       "Macedonia": "North Macedonia",
+      "Northern Cyprus": "Cyprus",
+      "Republic of Serbia": "Serbia",
       "S. Sudan": "South Sudan",
       "Solomon Is.": "Solomon Islands",
       "Somaliland": "Somalia",
