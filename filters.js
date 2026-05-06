@@ -1,6 +1,10 @@
 (function () {
   const countries = window.COUNTRY_FILTER_DATA || [];
   const labels = window.LINE_PATTERN_LABELS || {};
+
+  const searchInput = document.getElementById("countrySearch");
+  const dropdown    = document.getElementById("countryDropdown");
+
   const controls = {
     drivingSide:      document.getElementById("drivingSideFilter"),
     euPlate:          document.getElementById("euPlateFilter"),
@@ -11,7 +15,7 @@
     carColor:         document.getElementById("carColorFilter"),
     vehicleType:      document.getElementById("vehicleTypeFilter"),
   };
-  const resultCount   = document.getElementById("resultCount");
+  const resultCount    = document.getElementById("resultCount");
   const countryResults = document.getElementById("countryResults");
 
   // Populate line marking options with human-readable labels
@@ -34,7 +38,58 @@
     Object.values(controls).forEach((control) => {
       control.value = control.tagName === "INPUT" ? "" : "any";
     });
+    searchInput.value = "";
+    dropdown.hidden = true;
     renderResults();
+  });
+
+  function fuzzyScore(query, name) {
+    const q = query.toLowerCase();
+    const n = name.toLowerCase();
+    if (n.startsWith(q)) return 0;
+    if (n.includes(q)) return 1;
+    let qi = 0;
+    for (let i = 0; i < n.length && qi < q.length; i++) {
+      if (n[i] === q[qi]) qi++;
+    }
+    return qi === q.length ? 2 : Infinity;
+  }
+
+  function buildDropdown(query) {
+    if (!query) { dropdown.hidden = true; return; }
+    const matches = countries
+      .map((c) => ({ name: c.country, score: fuzzyScore(query, c.country) }))
+      .filter((m) => m.score < Infinity)
+      .sort((a, b) => a.score - b.score || a.name.localeCompare(b.name))
+      .slice(0, 20);
+    if (!matches.length) { dropdown.hidden = true; return; }
+    dropdown.replaceChildren(
+      ...matches.map(({ name }) => {
+        const li = document.createElement("li");
+        li.textContent = name;
+        li.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          searchInput.value = name;
+          dropdown.hidden = true;
+          renderResults();
+        });
+        return li;
+      })
+    );
+    dropdown.hidden = false;
+  }
+
+  searchInput.addEventListener("input", () => {
+    buildDropdown(searchInput.value.trim());
+    renderResults();
+  });
+
+  searchInput.addEventListener("focus", () => {
+    if (searchInput.value.trim()) buildDropdown(searchInput.value.trim());
+  });
+
+  searchInput.addEventListener("blur", () => {
+    dropdown.hidden = true;
   });
 
   function booleanMatches(value, filterValue) {
@@ -51,6 +106,9 @@
   }
 
   function countryMatches(country) {
+    const query = searchInput.value.trim();
+    if (query && fuzzyScore(query, country.country) === Infinity) return false;
+
     const year             = Number(controls.year.value);
     const cameraGeneration = controls.cameraGeneration.value;
     const hemisphere       = controls.hemisphere.value;
