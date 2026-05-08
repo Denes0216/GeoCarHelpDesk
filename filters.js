@@ -132,9 +132,51 @@
     return value ? "Yes" : "No";
   }
 
-  function listLineMarkings(markings) {
-    if (!markings.length) return "No data";
-    return markings.map((p) => labels[p] || p).join(", ");
+  const LINE_COLOR_MAP = {
+    white:  "#d0d0d0",
+    yellow: "#f0c040",
+    red:    "#d63c3c",
+    blue:   "#2979c8",
+    orange: "#e87a20",
+    green:  "#3ea060",
+  };
+
+  function parseInsideColors(raw) {
+    if (raw === "whiteyellow") return ["white", "yellow"];
+    if (raw === "whitegreen")  return ["white", "green"];
+    return [raw];
+  }
+
+  function roadLineSVG(pattern) {
+    const [outside, insideRaw] = pattern.split("-");
+    const insideColors = parseInsideColors(insideRaw);
+    const oc = LINE_COLOR_MAP[outside] || "#d0d0d0";
+    const W = 100, H = 20, edgeW = 5, cx = W / 2;
+
+    let dashes = "";
+    if (insideColors.length === 1) {
+      const ic = LINE_COLOR_MAP[insideColors[0]] || "#d0d0d0";
+      dashes = `<line x1="${cx}" y1="0" x2="${cx}" y2="${H}" stroke="${ic}" stroke-width="3" stroke-dasharray="6 4"/>`;
+    } else {
+      insideColors.forEach((col, i) => {
+        const x = cx + (i === 0 ? -3.5 : 3.5);
+        const ic = LINE_COLOR_MAP[col] || "#d0d0d0";
+        dashes += `<line x1="${x}" y1="0" x2="${x}" y2="${H}" stroke="${ic}" stroke-width="2" stroke-dasharray="6 4"/>`;
+      });
+    }
+
+    const label = labels[pattern] || pattern;
+    return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="road-line-svg" role="img" aria-label="${label}" title="${label}">` +
+      `<rect width="${W}" height="${H}" fill="#15191e" rx="3"/>` +
+      `<rect x="0" y="0" width="${edgeW}" height="${H}" fill="${oc}"/>` +
+      `<rect x="${W - edgeW}" y="0" width="${edgeW}" height="${H}" fill="${oc}"/>` +
+      dashes +
+      `</svg>`;
+  }
+
+  function roadLineMarkings(markings) {
+    if (!markings || !markings.length) return "No data";
+    return `<span class="roadline-row">${markings.map(roadLineSVG).join("")}</span>`;
   }
 
   function listValue(values) {
@@ -161,6 +203,76 @@
     }).join("");
   }
 
+  let _svgId = 0;
+
+  function drivingSideSVG(side) {
+    if (!side) return '<span style="color:var(--muted)">Unknown</span>';
+    const W = 52, H = 18, cx = W / 2;
+    const carW = 12, carH = 10, carX = side === "left" ? W * 0.25 : W * 0.75;
+    const otherX = side === "left" ? W * 0.75 : W * 0.25;
+    const carY = (H - carH) / 2;
+    const label = side === "left" ? "Left-hand traffic" : "Right-hand traffic";
+    return (
+      `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="driving-side-svg" title="${label}" role="img" aria-label="${label}">` +
+      `<rect width="${W}" height="${H}" fill="#15191e" rx="3"/>` +
+      `<line x1="${cx}" y1="2" x2="${cx}" y2="${H - 2}" stroke="#3a4048" stroke-width="1.5" stroke-dasharray="3 2"/>` +
+      `<rect x="${carX - carW / 2}" y="${carY}" width="${carW}" height="${carH}" fill="#f0c040" rx="2"/>` +
+      `<polygon points="${carX},${carY + 1} ${carX - 4},${carY + 6} ${carX + 4},${carY + 6}" fill="#15191e"/>` +
+      `<rect x="${otherX - carW / 2}" y="${carY}" width="${carW}" height="${carH}" fill="#f0c040" rx="2"/>` +
+      `<polygon points="${otherX},${carY + carH - 1} ${otherX - 4},${carY + carH - 6} ${otherX + 4},${carY + carH - 6}" fill="#15191e"/>` +
+      `</svg>`
+    );
+  }
+
+  const BOTH_SIDES_EU_PLATE = new Set(["Albania", "France", "Italy"]);
+
+  function euStarDots(cx, cy) {
+    let dots = "";
+    for (let i = 0; i < 6; i++) {
+      const a = (i / 6) * Math.PI * 2 - Math.PI / 2;
+      dots += `<circle cx="${(cx + 3.2 * Math.cos(a)).toFixed(1)}" cy="${(cy + 3.2 * Math.sin(a)).toFixed(1)}" r="0.9" fill="#ffcc00"/>`;
+    }
+    return dots;
+  }
+
+  function plateSVG(countryName, hasEuPlate) {
+    const W = 60, H = 20, stripW = 10;
+    const cid = `psvg${++_svgId}`;
+    const clip = `<defs><clipPath id="${cid}"><rect width="${W}" height="${H}" rx="3"/></clipPath></defs>`;
+
+    if (hasEuPlate === null || hasEuPlate === undefined) {
+      return (
+        `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="plate-svg" title="Unknown" role="img" aria-label="EU plate unknown">` +
+        clip + `<g clip-path="url(#${cid})"><rect width="${W}" height="${H}" fill="#2a2f36"/></g>` +
+        `<text x="${W / 2}" y="${H / 2 + 4}" text-anchor="middle" font-size="10" fill="#6b7280" font-family="sans-serif">?</text>` +
+        `</svg>`
+      );
+    }
+
+    if (!hasEuPlate) {
+      return (
+        `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="plate-svg" title="No EU blue plate" role="img" aria-label="No EU blue plate">` +
+        clip + `<g clip-path="url(#${cid})"><rect width="${W}" height="${H}" fill="#f0f0f0"/></g>` +
+        `</svg>`
+      );
+    }
+
+    const bothSides = BOTH_SIDES_EU_PLATE.has(countryName);
+    const label = bothSides ? "EU blue plate (both sides)" : "EU blue plate";
+    const strips = bothSides
+      ? `<rect x="0" y="0" width="${stripW}" height="${H}" fill="#003399"/>` +
+        euStarDots(stripW / 2, H / 2) +
+        `<rect x="${W - stripW}" y="0" width="${stripW}" height="${H}" fill="#003399"/>`
+      : `<rect x="0" y="0" width="${stripW}" height="${H}" fill="#003399"/>` +
+        euStarDots(stripW / 2, H / 2);
+
+    return (
+      `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="plate-svg" title="${label}" role="img" aria-label="${label}">` +
+      clip + `<g clip-path="url(#${cid})"><rect width="${W}" height="${H}" fill="#f0f0f0"/>${strips}</g>` +
+      `</svg>`
+    );
+  }
+
   function yearValue(years) {
     if (!years.length) return "No data";
     return `${years[0]}–${years[years.length - 1]}`;
@@ -177,9 +289,9 @@
         card.innerHTML = `
           <h3>${country.country}</h3>
           <dl>
-            <div><dt>Driving side</dt><dd>${country.drivingSide ?? "Unknown"}</dd></div>
-            <div><dt>EU blue plate</dt><dd>${yesNo(country.euLicencePlate)}</dd></div>
-            <div><dt>Line markings</dt><dd>${listLineMarkings(country.lineMarkings)}</dd></div>
+            <div><dt>Driving side</dt><dd>${drivingSideSVG(country.drivingSide)}</dd></div>
+            <div><dt>EU blue plate</dt><dd>${plateSVG(country.country, country.euLicencePlate)}</dd></div>
+            <div><dt>Line markings</dt><dd>${roadLineMarkings(country.lineMarkings)}</dd></div>
             <div><dt>Coverage</dt><dd>${yearValue(country.coverageYears)}</dd></div>
             <div><dt>Camera gen</dt><dd>${listValue(country.cameraGenerations)}</dd></div>
             <div><dt>Car color</dt><dd class="color-swatch-row">${colorSwatches(country.carColors)}</dd></div>

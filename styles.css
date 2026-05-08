@@ -650,6 +650,25 @@ h2 {
   flex-wrap: wrap;
 }
 
+.roadline-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.road-line-svg {
+  display: block;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.driving-side-svg,
+.plate-svg {
+  display: block;
+  flex-shrink: 0;
+}
+
 .color-swatch {
   display: inline-block;
   width: 18px;
