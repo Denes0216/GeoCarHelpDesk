@@ -141,6 +141,26 @@
     return values.length ? values.join(", ") : "No data";
   }
 
+  const COLOR_CSS = {
+    white:   "#e8e8e8",
+    black:   "#1c1c1c",
+    red:     "#d63c3c",
+    blue:    "#2979c8",
+    gray:    "#8a9099",
+    striped: null,
+  };
+
+  function colorSwatches(colors) {
+    const items = (colors && colors.length ? colors : ["white"]);
+    return items.map((c) => {
+      const bg = COLOR_CSS[c];
+      const style = bg
+        ? `background:${bg}`
+        : `background:repeating-linear-gradient(135deg,#d0d0d0 0px,#d0d0d0 4px,#1c1c1c 4px,#1c1c1c 8px)`;
+      return `<span class="color-swatch" style="${style}" title="${c}"></span>`;
+    }).join("");
+  }
+
   function yearValue(years) {
     if (!years.length) return "No data";
     return `${years[0]}–${years[years.length - 1]}`;
@@ -162,7 +182,7 @@
             <div><dt>Line markings</dt><dd>${listLineMarkings(country.lineMarkings)}</dd></div>
             <div><dt>Coverage</dt><dd>${yearValue(country.coverageYears)}</dd></div>
             <div><dt>Camera gen</dt><dd>${listValue(country.cameraGenerations)}</dd></div>
-            <div><dt>Car color</dt><dd>${listValue(country.carColors ?? ["white"])}</dd></div>
+            <div><dt>Car color</dt><dd class="color-swatch-row">${colorSwatches(country.carColors)}</dd></div>
             <div><dt>Vehicle type</dt><dd>${country.vehicleType ?? "car"}</dd></div>
           </dl>
         `;

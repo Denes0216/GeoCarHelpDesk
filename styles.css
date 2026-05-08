@@ -643,6 +643,22 @@ h2 {
   line-height: 1.35;
 }
 
+.color-swatch-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  flex-shrink: 0;
+}
+
 @media (max-width: 980px) {
   .filter-bar {
     grid-template-columns: repeat(3, minmax(0, 1fr));
