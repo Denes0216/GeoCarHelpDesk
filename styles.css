@@ -669,6 +669,76 @@ h2 {
   flex-shrink: 0;
 }
 
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5px 10px;
+  background: #111820;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.custom-select-trigger:focus {
+  outline: none;
+  border-color: rgba(244, 201, 93, 0.5);
+}
+
+.custom-select-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 300;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-strong);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  min-width: 100%;
+  max-height: 280px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.custom-select-panel[hidden] {
+  display: none;
+}
+
+.custom-select-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.custom-select-option:hover,
+.custom-select-option.is-selected {
+  background: rgba(244, 201, 93, 0.12);
+  color: #ffe08a;
+}
+
+.csd-text {
+  font-size: 13px;
+  line-height: 1;
+}
+
 .color-swatch {
   display: inline-block;
   width: 18px;

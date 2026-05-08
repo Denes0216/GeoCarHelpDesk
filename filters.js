@@ -273,6 +273,69 @@
     );
   }
 
+  function makeCustomSelect(nativeSelect, renderOption) {
+    nativeSelect.style.display = "none";
+
+    const listeners = { change: [], input: [] };
+    let _value = nativeSelect.value;
+
+    const proxy = {
+      get value() { return _value; },
+      set value(v) { _value = v; nativeSelect.value = v; updateTrigger(); },
+      tagName: "CUSTOM-SELECT",
+      addEventListener(type, fn) { if (listeners[type]) listeners[type].push(fn); },
+    };
+
+    function emit(type) { (listeners[type] || []).forEach((fn) => fn()); }
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "custom-select-wrapper";
+
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "custom-select-trigger";
+
+    const panel = document.createElement("ul");
+    panel.className = "custom-select-panel";
+    panel.hidden = true;
+
+    function updateTrigger() {
+      trigger.innerHTML = renderOption(_value);
+    }
+
+    function openPanel() {
+      panel.innerHTML = "";
+      Array.from(nativeSelect.options).forEach((opt) => {
+        const li = document.createElement("li");
+        li.className = "custom-select-option" + (_value === opt.value ? " is-selected" : "");
+        li.innerHTML = renderOption(opt.value);
+        li.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          proxy.value = opt.value;
+          panel.hidden = true;
+          emit("change");
+        });
+        panel.appendChild(li);
+      });
+      panel.hidden = false;
+    }
+
+    trigger.addEventListener("click", () => {
+      if (panel.hidden) openPanel(); else panel.hidden = true;
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!wrapper.contains(e.target)) panel.hidden = true;
+    }, true);
+
+    wrapper.appendChild(trigger);
+    wrapper.appendChild(panel);
+    nativeSelect.insertAdjacentElement("afterend", wrapper);
+
+    updateTrigger();
+    return proxy;
+  }
+
   function yearValue(years) {
     if (!years.length) return "No data";
     return `${years[0]}–${years[years.length - 1]}`;
@@ -302,6 +365,24 @@
       })
     );
   }
+
+  controls.drivingSide = makeCustomSelect(
+    document.getElementById("drivingSideFilter"),
+    (v) => v === "any"
+      ? '<span class="csd-text">Any</span>'
+      : `${drivingSideSVG(v)}<span class="csd-text">${v === "left" ? "Left" : "Right"}</span>`
+  );
+
+  controls.lineMarking = makeCustomSelect(
+    document.getElementById("lineMarkingFilter"),
+    (v) => v === "any"
+      ? '<span class="csd-text">Any</span>'
+      : roadLineSVG(v)
+  );
+
+  [controls.drivingSide, controls.lineMarking].forEach((ctrl) => {
+    ctrl.addEventListener("change", renderResults);
+  });
 
   renderResults();
 })();
