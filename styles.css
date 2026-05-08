@@ -82,6 +82,27 @@ body {
   color: #ffe08a;
 }
 
+.nav-link-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.nav-new-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 999px;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
 h1,
 h2,
 p {

@@ -90,7 +90,7 @@
     "South Africa":"white","South Korea":"white","South Sudan":"white","Spain":"eu","Sri Lanka":"white",
     "Svalbard and Jan Mayen":"white","Sweden":"eu","Switzerland":"white","Taiwan":"white",
     "Thailand":"white","Tunisia":"black","Turkey":"eu","Uganda":"white","Ukraine":"eu",
-    "United Arab Emirates":"white","United Kingdom":"eu","United States":"white",
+    "United Arab Emirates":"white","United Kingdom":"yellow","United States":"white",
     "United States Minor Outlying Islands":"white","United States Virgin Islands":"white",
     "Uruguay":"white","Vietnam":"white",
   };

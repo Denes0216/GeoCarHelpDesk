@@ -204,13 +204,13 @@
   const newGameBtn    = document.getElementById("newGameBtn");
 
   // ── Game generation ───────────────────────────────────────────────────────
+  const FIXED_CRITERIA_IDS = ["lineMarkings", "drivingSide", "hemisphere", "carColors", "cameraGenerations"];
+  const FIXED_FILTER_TYPES = FIXED_CRITERIA_IDS.map(id => FILTER_TYPES.find(ft => ft.id === id));
+
   function generateGame() {
     for (let attempt = 0; attempt < 300; attempt++) {
-      const n = 3 + Math.floor(Math.random() * 3);
-      const shuffled = [...FILTER_TYPES].sort(() => Math.random() - 0.5).slice(0, n);
-
       const criteria = [];
-      for (const ft of shuffled) {
+      for (const ft of FIXED_FILTER_TYPES) {
         const pool = ft.values(countries).filter(v =>
           countries.some(c => ft.hasData(c) && ft.matches(c, v))
         );
@@ -218,7 +218,7 @@
         const value = pool[Math.floor(Math.random() * pool.length)];
         criteria.push({ ...ft, value });
       }
-      if (criteria.length < 3) continue;
+      if (criteria.length < 5) continue;
 
       const valid = countries.filter(c =>
         criteria.every(cr => cr.hasData(c) && cr.matches(c, cr.value))
