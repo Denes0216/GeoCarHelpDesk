@@ -117,7 +117,7 @@
 
     return (
       (controls.drivingSide.value === "any" || country.drivingSide === controls.drivingSide.value) &&
-      booleanMatches(country.euLicencePlate, controls.euPlate.value) &&
+      euPlateMatches(country.euLicencePlate, controls.euPlate.value) &&
       (controls.lineMarking.value === "any" || country.lineMarkings.includes(controls.lineMarking.value)) &&
       yearsMatch(country.coverageYears, year) &&
       (cameraGeneration === "any" || country.cameraGenerations.includes(Number(cameraGeneration))) &&
@@ -224,8 +224,6 @@
     );
   }
 
-  const BOTH_SIDES_EU_PLATE = new Set(["Albania", "France", "Italy"]);
-
   function euStarDots(cx, cy) {
     let dots = "";
     for (let i = 0; i < 6; i++) {
@@ -235,42 +233,72 @@
     return dots;
   }
 
-  function plateSVG(countryName, hasEuPlate) {
+  const PLATE_LABEL = {
+    "eu":               "EU blue plate",
+    "eu-both":          "EU blue plate (both sides)",
+    "eu-yellow-right":  "EU blue (left) + yellow (right)",
+    "yellow-eu":        "Yellow plate, EU blue strip",
+    "yellow":           "Yellow plate",
+    "black":            "Black plate",
+    "red-stripe":       "Red stripe (left)",
+    "red":              "Red plate",
+    "white":            "White plate",
+  };
+
+  const PLATE_BASE = {
+    "eu": "#f0f0f0", "eu-both": "#f0f0f0", "eu-yellow-right": "#f0f0f0",
+    "yellow-eu": "#f5c518", "yellow": "#f5c518",
+    "black": "#111111",
+    "red-stripe": "#f0f0f0",
+    "red": "#c0282a",
+    "white": "#f0f0f0",
+  };
+
+  function plateSVG(_, plateType) {
     const W = 60, H = 20, stripW = 10;
     const cid = `psvg${++_svgId}`;
     const clip = `<defs><clipPath id="${cid}"><rect width="${W}" height="${H}" rx="3"/></clipPath></defs>`;
 
-    if (hasEuPlate === null || hasEuPlate === undefined) {
+    if (!plateType) {
       return (
-        `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="plate-svg" title="Unknown" role="img" aria-label="EU plate unknown">` +
+        `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="plate-svg" title="Unknown" role="img" aria-label="Unknown plate">` +
         clip + `<g clip-path="url(#${cid})"><rect width="${W}" height="${H}" fill="#2a2f36"/></g>` +
         `<text x="${W / 2}" y="${H / 2 + 4}" text-anchor="middle" font-size="10" fill="#6b7280" font-family="sans-serif">?</text>` +
         `</svg>`
       );
     }
 
-    if (!hasEuPlate) {
-      return (
-        `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="plate-svg" title="No EU blue plate" role="img" aria-label="No EU blue plate">` +
-        clip + `<g clip-path="url(#${cid})"><rect width="${W}" height="${H}" fill="#f0f0f0"/></g>` +
-        `</svg>`
-      );
-    }
+    const baseFill = PLATE_BASE[plateType] || "#f0f0f0";
+    const label    = PLATE_LABEL[plateType] || plateType;
+    const EU_BLUE  = "#003399";
 
-    const bothSides = BOTH_SIDES_EU_PLATE.has(countryName);
-    const label = bothSides ? "EU blue plate (both sides)" : "EU blue plate";
-    const strips = bothSides
-      ? `<rect x="0" y="0" width="${stripW}" height="${H}" fill="#003399"/>` +
-        euStarDots(stripW / 2, H / 2) +
-        `<rect x="${W - stripW}" y="0" width="${stripW}" height="${H}" fill="#003399"/>`
-      : `<rect x="0" y="0" width="${stripW}" height="${H}" fill="#003399"/>` +
-        euStarDots(stripW / 2, H / 2);
+    let strips = "";
+    if (plateType === "eu" || plateType === "eu-both" || plateType === "eu-yellow-right" || plateType === "yellow-eu") {
+      strips += `<rect x="0" y="0" width="${stripW}" height="${H}" fill="${EU_BLUE}"/>` + euStarDots(stripW / 2, H / 2);
+    }
+    if (plateType === "eu-both") {
+      strips += `<rect x="${W - stripW}" y="0" width="${stripW}" height="${H}" fill="${EU_BLUE}"/>`;
+    }
+    if (plateType === "eu-yellow-right") {
+      strips += `<rect x="${W - stripW}" y="0" width="${stripW}" height="${H}" fill="#f5c518"/>`;
+    }
+    if (plateType === "red-stripe") {
+      strips += `<rect x="0" y="0" width="${stripW}" height="${H}" fill="#c0282a"/>`;
+    }
 
     return (
       `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg" class="plate-svg" title="${label}" role="img" aria-label="${label}">` +
-      clip + `<g clip-path="url(#${cid})"><rect width="${W}" height="${H}" fill="#f0f0f0"/>${strips}</g>` +
+      clip + `<g clip-path="url(#${cid})"><rect width="${W}" height="${H}" fill="${baseFill}"/>${strips}</g>` +
       `</svg>`
     );
+  }
+
+  function euPlateMatches(plateType, filterValue) {
+    if (filterValue === "any") return true;
+    if (filterValue === "unknown") return plateType === null || plateType === undefined;
+    if (!plateType) return false;
+    const isEu = plateType === "eu" || plateType.startsWith("eu-") || plateType.endsWith("-eu");
+    return filterValue === "yes" ? isEu : !isEu;
   }
 
   function makeCustomSelect(nativeSelect, renderOption) {

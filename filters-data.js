@@ -53,36 +53,46 @@
     "United States Virgin Islands":"left","Uruguay":"right","Vietnam":"right",
   };
 
-  // ── EU blue licence plate (from geo-car-helpdesk.ts euPlateData) ──────────
+  // ── licence plate type ───────────────────────────────────────────────────
+  // "eu"             – white plate, EU blue strip on left
+  // "eu-both"        – white plate, EU blue strips on both sides (Albania, France, Italy)
+  // "eu-yellow-right"– white plate, EU blue left + yellow right (Portugal)
+  // "yellow-eu"      – yellow plate, EU blue strip on left (Luxembourg, Israel)
+  // "yellow"         – yellow plate (Japan, Laos, Colombia, Christmas Island)
+  // "black"          – black plate (Malaysia, Tunisia, Qatar)
+  // "red-stripe"     – white plate, red strip on left (Isle of Man, Kyrgyzstan)
+  // "red"            – red plate (Bhutan)
+  // "white"          – plain white plate
+  // null             – unknown
   const _euPlate = {
-    "Åland":false,"Albania":true,"American Samoa":false,"Andorra":false,"Argentina":false,
-    "Australia":false,"Austria":true,"Bangladesh":false,"Belgium":true,"Bermuda":false,
-    "Bhutan":false,"Bolivia":false,"Bosnia and Herzegovina":true,"Botswana":false,
-    "Brazil":false,"Bulgaria":true,"Cambodia":false,"Canada":false,"Chile":false,
-    "China":false,"Christmas Island":false,"Cocos (Keeling) Islands":false,"Colombia":false,
-    "Costa Rica":false,"Croatia":false,"Curaçao":false,"Cyprus":true,"Czech Republic":true,
-    "Denmark":true,"Dominican Republic":false,"Ecuador":false,"Egypt":false,"Estonia":true,
-    "Eswatini":false,"Falkland Islands":false,"Faroe Islands":true,"Finland":true,"France":true,
-    "Germany":true,"Ghana":false,"Gibraltar":true,"Greece":true,"Greenland":false,"Guam":false,
-    "Guatemala":false,"Hong Kong":false,"Hungary":true,"Iceland":false,"India":false,
-    "Indonesia":false,"Iraq":false,"Ireland":true,"Isle of Man":false,"Israel":false,
-    "Italy":true,"Japan":false,"Jersey":false,"Jordan":false,"Kazakhstan":false,"Kenya":false,
-    "Kyrgyzstan":false,"Laos":false,"Latvia":true,"Lebanon":false,"Lesotho":false,
-    "Liechtenstein":false,"Lithuania":true,"Luxembourg":true,"Macao":false,"Madagascar":false,
-    "Malaysia":false,"Malta":true,"Mexico":false,"Monaco":false,"Mongolia":false,
-    "Montenegro":false,"Namibia":false,"Nepal":false,"Netherlands":true,"New Zealand":false,
-    "Nigeria":false,"North Macedonia":true,"Northern Mariana Islands":false,"Norway":true,
-    "Oman":false,"Pakistan":false,"Palestine":false,"Panama":false,"Papua New Guinea":false,
-    "Paraguay":false,"Peru":false,"Philippines":false,"Pitcairn Islands":false,"Poland":true,
-    "Portugal":true,"Puerto Rico":false,"Qatar":false,"Réunion":false,"Romania":true,
-    "Russia":false,"Rwanda":false,"Samoa":false,"San Marino":false,"São Tomé and Príncipe":false,
-    "Senegal":false,"Serbia":true,"Singapore":false,"Slovakia":true,"Slovenia":true,
-    "South Africa":false,"South Korea":false,"South Sudan":false,"Spain":true,"Sri Lanka":false,
-    "Svalbard and Jan Mayen":false,"Sweden":true,"Switzerland":false,"Taiwan":false,
-    "Thailand":false,"Tunisia":false,"Turkey":true,"Uganda":false,"Ukraine":true,
-    "United Arab Emirates":false,"United Kingdom":true,"United States":false,
-    "United States Minor Outlying Islands":false,"United States Virgin Islands":false,
-    "Uruguay":false,"Vietnam":false,
+    "Åland":"eu","Albania":"eu-both","American Samoa":"white","Andorra":"white","Argentina":"white",
+    "Australia":"white","Austria":"eu","Bangladesh":"white","Belgium":"eu","Bermuda":"white",
+    "Bhutan":"red","Bolivia":"white","Bosnia and Herzegovina":"eu","Botswana":"white",
+    "Brazil":"white","Bulgaria":"eu","Cambodia":"white","Canada":"white","Chile":"white",
+    "China":"white","Christmas Island":"yellow","Cocos (Keeling) Islands":"white","Colombia":"yellow",
+    "Costa Rica":"white","Croatia":"eu","Curaçao":"white","Cyprus":"eu","Czech Republic":"eu",
+    "Denmark":"eu","Dominican Republic":"white","Ecuador":"white","Egypt":"white","Estonia":"eu",
+    "Eswatini":"white","Falkland Islands":"white","Faroe Islands":"eu","Finland":"eu","France":"eu-both",
+    "Germany":"eu","Ghana":"white","Gibraltar":"eu","Greece":"eu","Greenland":"white","Guam":"white",
+    "Guatemala":"white","Hong Kong":"white","Hungary":"eu","Iceland":"white","India":"white",
+    "Indonesia":"white","Iraq":"white","Ireland":"eu","Isle of Man":"red-stripe","Israel":"yellow-eu",
+    "Italy":"eu-both","Japan":"yellow","Jersey":"white","Jordan":"white","Kazakhstan":"white","Kenya":"white",
+    "Kyrgyzstan":"red-stripe","Laos":"yellow","Latvia":"eu","Lebanon":"white","Lesotho":"white",
+    "Liechtenstein":"white","Lithuania":"eu","Luxembourg":"yellow-eu","Macao":"white","Madagascar":"white",
+    "Malaysia":"black","Malta":"eu","Mexico":"white","Monaco":"white","Mongolia":"white",
+    "Montenegro":"white","Namibia":"white","Nepal":"white","Netherlands":"eu","New Zealand":"white",
+    "Nigeria":"white","North Macedonia":"eu","Northern Mariana Islands":"white","Norway":"eu",
+    "Oman":"white","Pakistan":"white","Palestine":"white","Panama":"white","Papua New Guinea":"white",
+    "Paraguay":"white","Peru":"white","Philippines":"white","Pitcairn Islands":"white","Poland":"eu",
+    "Portugal":"eu-yellow-right","Puerto Rico":"white","Qatar":"black","Réunion":"white","Romania":"eu",
+    "Russia":"white","Rwanda":"white","Samoa":"white","San Marino":"white","São Tomé and Príncipe":"white",
+    "Senegal":"white","Serbia":"eu","Singapore":"white","Slovakia":"eu","Slovenia":"eu",
+    "South Africa":"white","South Korea":"white","South Sudan":"white","Spain":"eu","Sri Lanka":"white",
+    "Svalbard and Jan Mayen":"white","Sweden":"eu","Switzerland":"white","Taiwan":"white",
+    "Thailand":"white","Tunisia":"black","Turkey":"eu","Uganda":"white","Ukraine":"eu",
+    "United Arab Emirates":"white","United Kingdom":"eu","United States":"white",
+    "United States Minor Outlying Islands":"white","United States Virgin Islands":"white",
+    "Uruguay":"white","Vietnam":"white",
   };
 
   // ── road line patterns (from road-lines.ts roadLinesData) ─────────────────
