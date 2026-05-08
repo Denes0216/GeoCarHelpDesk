@@ -19,7 +19,14 @@
   const countryResults = document.getElementById("countryResults");
 
   // Populate line marking options with human-readable labels
-  const lineMarkingOptions = [...new Set(countries.flatMap((c) => c.lineMarkings || []))].sort();
+  const PRIORITY_LINES = ["white-white", "yellow-white", "yellow-yellow"];
+  const lineMarkingOptions = [...new Set(countries.flatMap((c) => c.lineMarkings || []))].sort((a, b) => {
+    const ai = PRIORITY_LINES.indexOf(a), bi = PRIORITY_LINES.indexOf(b);
+    if (ai !== -1 && bi !== -1) return ai - bi;
+    if (ai !== -1) return -1;
+    if (bi !== -1) return 1;
+    return a.localeCompare(b);
+  });
   controls.lineMarking.append(
     ...lineMarkingOptions.map((pattern) => {
       const option = document.createElement("option");
@@ -116,14 +123,20 @@
     const vehicleType      = controls.vehicleType.value;
 
     return (
-      (controls.drivingSide.value === "any" || country.drivingSide === controls.drivingSide.value) &&
+      (controls.drivingSide.value === "any" ||
+       (controls.drivingSide.value === "unknown" && !country.drivingSide) ||
+       !country.drivingSide ||
+       country.drivingSide === controls.drivingSide.value) &&
       euPlateMatches(country.euLicencePlate, controls.euPlate.value) &&
-      (controls.lineMarking.value === "any" || country.lineMarkings.includes(controls.lineMarking.value)) &&
+      (controls.lineMarking.value === "any" || !country.lineMarkings.length || country.lineMarkings.includes(controls.lineMarking.value)) &&
       yearsMatch(country.coverageYears, year) &&
-      (cameraGeneration === "any" || country.cameraGenerations.includes(Number(cameraGeneration))) &&
-      (hemisphere === "any" || country.hemisphere === hemisphere || country.hemisphere === "both") &&
+      (cameraGeneration === "any" ||
+       (cameraGeneration === "unknown" && !country.cameraGenerations.length) ||
+       !country.cameraGenerations.length ||
+       country.cameraGenerations.includes(Number(cameraGeneration))) &&
+      (hemisphere === "any" || !country.hemisphere || country.hemisphere === hemisphere || country.hemisphere === "both") &&
       (carColor === "any" || (country.carColors ?? ["white"]).includes(carColor)) &&
-      (vehicleType === "any" || country.vehicleType === vehicleType)
+      (vehicleType === "any" || !country.vehicleType || country.vehicleType === vehicleType)
     );
   }
 
@@ -296,9 +309,8 @@
   function euPlateMatches(plateType, filterValue) {
     if (filterValue === "any") return true;
     if (filterValue === "unknown") return plateType === null || plateType === undefined;
-    if (!plateType) return false;
-    const isEu = plateType === "eu" || plateType.startsWith("eu-") || plateType.endsWith("-eu");
-    return filterValue === "yes" ? isEu : !isEu;
+    if (!plateType) return true;  // no data = wildcard, passes any specific filter
+    return plateType === filterValue;
   }
 
   function makeCustomSelect(nativeSelect, renderOption) {
@@ -396,9 +408,11 @@
 
   controls.drivingSide = makeCustomSelect(
     document.getElementById("drivingSideFilter"),
-    (v) => v === "any"
-      ? '<span class="csd-text">Any</span>'
-      : `${drivingSideSVG(v)}<span class="csd-text">${v === "left" ? "Left" : "Right"}</span>`
+    (v) => {
+      if (v === "any")     return '<span class="csd-text">Any</span>';
+      if (v === "unknown") return '<span class="csd-text" style="color:var(--muted)">Unknown</span>';
+      return `${drivingSideSVG(v)}<span class="csd-text">${v === "left" ? "Left" : "Right"}</span>`;
+    }
   );
 
   controls.lineMarking = makeCustomSelect(
@@ -408,7 +422,16 @@
       : roadLineSVG(v)
   );
 
-  [controls.drivingSide, controls.lineMarking].forEach((ctrl) => {
+  controls.euPlate = makeCustomSelect(
+    document.getElementById("euPlateFilter"),
+    (v) => {
+      if (v === "any")     return '<span class="csd-text">Any</span>';
+      if (v === "unknown") return `${plateSVG(null, null)}<span class="csd-text">Unknown</span>`;
+      return `${plateSVG(null, v)}<span class="csd-text">${PLATE_LABEL[v] || v}</span>`;
+    }
+  );
+
+  [controls.drivingSide, controls.lineMarking, controls.euPlate].forEach((ctrl) => {
     ctrl.addEventListener("change", renderResults);
   });
 

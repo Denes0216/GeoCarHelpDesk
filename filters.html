@@ -20,8 +20,6 @@
         <input type="text" id="countrySearch" class="country-search-input" placeholder="Search for a country…" autocomplete="off" spellcheck="false">
         <ul id="countryDropdown" class="country-dropdown" hidden></ul>
       </div>
-      
-      <!--Todo: show elements if unknown or no data-->
 
       <section class="filter-bar" aria-label="Country filters">
         <label>
@@ -30,17 +28,23 @@
             <option value="any">Any</option>
             <option value="left">Left</option>
             <option value="right">Right</option>
+            <option value="unknown">Unknown</option>
           </select>
         </label>
-        
-        <!--Todo: change eu blue plate to svg selection-->
 
         <label>
-          <span>Has EU blue plate</span>
+          <span>Licence plate</span>
           <select id="euPlateFilter">
             <option value="any">Any</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            <option value="eu">EU blue plate</option>
+            <option value="eu-both">EU blue (both sides)</option>
+            <option value="eu-yellow-right">EU blue + yellow right</option>
+            <option value="yellow-eu">Yellow + EU blue strip</option>
+            <option value="yellow">Yellow plate</option>
+            <option value="black">Black plate</option>
+            <option value="red-stripe">Red stripe (left)</option>
+            <option value="red">Red plate</option>
+            <option value="white">White plate</option>
             <option value="unknown">Unknown</option>
           </select>
         </label>
@@ -65,6 +69,7 @@
             <option value="2">Gen 2</option>
             <option value="3">Gen 3</option>
             <option value="4">Gen 4</option>
+            <option value="unknown">No data</option>
           </select>
         </label>
 
