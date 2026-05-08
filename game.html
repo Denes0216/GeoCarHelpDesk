@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GeoHints Game</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="filters-page">
+    <main class="filters-shell">
+      <header class="filters-header">
+        <div>
+          <h1>GeoHints Game</h1>
+          <p>Guess any country that matches all criteria. Max 5 guesses.</p>
+        </div>
+        <nav style="display:flex;gap:8px;align-items:center">
+          <a class="nav-link" href="filters.html">Filters</a>
+          <a class="nav-link" href="index.html">Map</a>
+        </nav>
+      </header>
+
+      <section class="game-section">
+        <p class="game-section-label">Match all of these criteria</p>
+        <div class="game-crit-row" id="gameCriteria"></div>
+      </section>
+
+      <div class="search-wrap">
+        <input type="text" id="guessInput" class="country-search-input" placeholder="Type a country name and press Enter…" autocomplete="off" spellcheck="false">
+        <ul id="guessDropdown" class="country-dropdown" hidden></ul>
+      </div>
+
+      <div class="game-controls-row">
+        <span class="game-counter" id="guessCounter">0 / 5 guesses</span>
+        <button type="button" id="newGameBtn" class="nav-link" style="border:none;cursor:pointer">New game</button>
+      </div>
+
+      <div id="gameMessage" class="game-message" hidden></div>
+
+      <div id="guessHistory"></div>
+    </main>
+
+    <script src="filters-data.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
