@@ -140,11 +140,6 @@
     );
   }
 
-  function yesNo(value) {
-    if (value === null || value === undefined) return "Unknown";
-    return value ? "Yes" : "No";
-  }
-
   const LINE_COLOR_MAP = {
     white:  "#d0d0d0",
     yellow: "#f0c040",
@@ -188,12 +183,26 @@
   }
 
   function roadLineMarkings(markings) {
-    if (!markings || !markings.length) return "No data";
-    return `<span class="roadline-row">${markings.map(roadLineSVG).join("")}</span>`;
+    if (!markings || !markings.length) return '<span class="no-data-label">No data</span>';
+    return markings.map(roadLineSVG).join("");
   }
 
-  function listValue(values) {
-    return values.length ? values.join(", ") : "No data";
+  function genBadges(gens) {
+    if (!gens || !gens.length) return '<span class="no-data-label">No data</span>';
+    return gens.map(g => `<span class="gen-badge">Gen ${g}</span>`).join("");
+  }
+
+  function hemisphereLabel(h) {
+    if (!h) return '<span class="no-data-label">Unknown</span>';
+    if (h === "both") return "N + S";
+    return h === "north" ? "Northern" : "Southern";
+  }
+
+  function vehicleTypeLabel(t) {
+    if (!t || t === "car") return "Car";
+    if (t === "truck") return "Truck / Pickup";
+    if (t === "suv") return "SUV";
+    return t;
   }
 
   const COLOR_CSS = {
@@ -390,16 +399,40 @@
         const card = document.createElement("article");
         card.className = "country-card";
         card.innerHTML = `
-          <h3>${country.country}</h3>
-          <dl>
-            <div><dt>Driving side</dt><dd>${drivingSideSVG(country.drivingSide)}</dd></div>
-            <div><dt>EU blue plate</dt><dd>${plateSVG(country.country, country.euLicencePlate)}</dd></div>
-            <div><dt>Line markings</dt><dd>${roadLineMarkings(country.lineMarkings)}</dd></div>
-            <div><dt>Coverage</dt><dd>${yearValue(country.coverageYears)}</dd></div>
-            <div><dt>Camera gen</dt><dd>${listValue(country.cameraGenerations)}</dd></div>
-            <div><dt>Car color</dt><dd class="color-swatch-row">${colorSwatches(country.carColors)}</dd></div>
-            <div><dt>Vehicle type</dt><dd>${country.vehicleType ?? "car"}</dd></div>
-          </dl>
+          <div class="card-head">
+            <h3>${country.country}</h3>
+            <span class="card-coverage">${yearValue(country.coverageYears)}</span>
+          </div>
+          <div class="card-grid">
+            <div class="card-chip">
+              <span class="chip-label">Driving side</span>
+              <div class="chip-value">${drivingSideSVG(country.drivingSide)}${country.drivingSide ? `<span class="chip-sub">${country.drivingSide === "left" ? "Left" : "Right"}</span>` : ""}</div>
+            </div>
+            <div class="card-chip">
+              <span class="chip-label">Plate</span>
+              <div class="chip-value">${plateSVG(country.country, country.euLicencePlate)}</div>
+            </div>
+            <div class="card-chip card-chip--full">
+              <span class="chip-label">Road lines</span>
+              <div class="chip-value roadline-row">${roadLineMarkings(country.lineMarkings)}</div>
+            </div>
+            <div class="card-chip">
+              <span class="chip-label">Camera gen</span>
+              <div class="chip-value">${genBadges(country.cameraGenerations)}</div>
+            </div>
+            <div class="card-chip">
+              <span class="chip-label">Car color</span>
+              <div class="chip-value color-swatch-row">${colorSwatches(country.carColors)}</div>
+            </div>
+            <div class="card-chip">
+              <span class="chip-label">Hemisphere</span>
+              <div class="chip-value">${hemisphereLabel(country.hemisphere)}</div>
+            </div>
+            <div class="card-chip">
+              <span class="chip-label">Vehicle type</span>
+              <div class="chip-value">${vehicleTypeLabel(country.vehicleType)}</div>
+            </div>
+          </div>
         `;
         return card;
       })
@@ -431,7 +464,47 @@
     }
   );
 
-  [controls.drivingSide, controls.lineMarking, controls.euPlate].forEach((ctrl) => {
+  controls.cameraGeneration = makeCustomSelect(
+    document.getElementById("cameraGenerationFilter"),
+    (v) => {
+      if (v === "any")     return '<span class="csd-text">Any</span>';
+      if (v === "unknown") return '<span class="csd-text" style="color:var(--muted)">No data</span>';
+      return `<span class="gen-badge">Gen ${v}</span>`;
+    }
+  );
+
+  controls.hemisphere = makeCustomSelect(
+    document.getElementById("hemisphereFilter"),
+    (v) => {
+      if (v === "any")   return '<span class="csd-text">Any</span>';
+      if (v === "north") return '<span class="csd-text">Northern</span>';
+      return '<span class="csd-text">Southern</span>';
+    }
+  );
+
+  controls.carColor = makeCustomSelect(
+    document.getElementById("carColorFilter"),
+    (v) => {
+      if (v === "any") return '<span class="csd-text">Any</span>';
+      const bg = COLOR_CSS[v];
+      const style = bg
+        ? `background:${bg}`
+        : `background:repeating-linear-gradient(135deg,#d0d0d0 0,#d0d0d0 4px,#1c1c1c 4px,#1c1c1c 8px)`;
+      return `<span class="color-swatch" style="${style}"></span><span class="csd-text">${v.charAt(0).toUpperCase() + v.slice(1)}</span>`;
+    }
+  );
+
+  controls.vehicleType = makeCustomSelect(
+    document.getElementById("vehicleTypeFilter"),
+    (v) => {
+      if (v === "any") return '<span class="csd-text">Any</span>';
+      const label = v === "truck" ? "Truck / Pickup" : v === "suv" ? "SUV" : "Car";
+      return `<span class="csd-text">${label}</span>`;
+    }
+  );
+
+  [controls.drivingSide, controls.lineMarking, controls.euPlate,
+   controls.cameraGeneration, controls.hemisphere, controls.carColor, controls.vehicleType].forEach((ctrl) => {
     ctrl.addEventListener("change", renderResults);
   });
 
