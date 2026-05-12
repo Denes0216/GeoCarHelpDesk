@@ -7,7 +7,7 @@
     byState[p.state].push(p);
   }
 
-  const ALL_COLORS = ["white", "yellow", "blue", "green", "red", "multicolor"];
+  const ALL_COLORS = ["white", "yellow", "blue", "green", "red"];
   const GEO_NAME   = { "District of Columbia": "Washington DC" };
 
   let activeColors = new Set();
@@ -30,7 +30,7 @@
   }
 
   function matchesFilters(p) {
-    if (activeColors.size > 0 && !activeColors.has(p.color)) return false;
+    if (activeColors.size > 0 && ![...activeColors].every(c => p.colors.includes(c))) return false;
     return true;
   }
 
