@@ -4,6 +4,7 @@ const APP_CACHE = `${CACHE_VERSION}-app`;
 const APP_FILES = [
   "./",
   "./index.html",
+  "./googlecars.html",
   "./styles.css",
   "./app.js",
   "./cars-data.js",
